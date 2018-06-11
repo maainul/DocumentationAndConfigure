@@ -31,3 +31,4 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 ```
+LinK : https://itsfoss.com/sublime-text-3-linux/
