@@ -32,3 +32,9 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 LinK : https://itsfoss.com/sublime-text-3-linux/
+## Download Youtube Video 
+```
+sudo apt-get install youtube-dl
+youtube-dl cit (link)
+```
+Video Tutorial Link :https://www.youtube.com/watch?v=Th1Kk4HsLWE 
