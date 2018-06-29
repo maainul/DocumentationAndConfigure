@@ -38,3 +38,10 @@ sudo apt-get install youtube-dl
 youtube-dl cit (link)
 ```
 Video Tutorial Link :https://www.youtube.com/watch?v=Th1Kk4HsLWE 
+## Install pip
+```
+sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get install python-pip
+pip -V
+```
+
