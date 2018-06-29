@@ -44,4 +44,20 @@ sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install python-pip
 pip -V
 ```
+## Install Theme in ubuntu
+```
+1.First Install Tweak Tools:
+  sudo apt-get install gnome-tweak-tool
+  sudo add-apt-repository ppa:webupd8team/gnome3
+  sudo apt-get update
+  sudo apt-get install gnome-shell-extensions-user-themes
+Link: https://www.wikihow.com/Change-Themes-on-Ubuntu-with-Gnome-Tweak-Tool
+  
+2.Now install theme:
+  sudo add-apt-repository ppa:snwh/pulp
+  sudo apt-get update
+  sudo apt-get install paper-icon-theme paper-gtk-theme
+  
+  https://www.ubuntupit.com/best-ubuntu-themes-will-blow-mind/  
 
+```
