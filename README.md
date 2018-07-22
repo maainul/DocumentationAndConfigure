@@ -75,6 +75,9 @@ Link: https://www.wikihow.com/Change-Themes-on-Ubuntu-with-Gnome-Tweak-Tool
   show tables;
   exit
   exit
+  
+  docker-machine ip default
+  docker inspect CONTAINER_ID
   ```
 # Install mysql workbench
 ```
