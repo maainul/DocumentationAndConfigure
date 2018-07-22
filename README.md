@@ -59,8 +59,8 @@ Link: https://www.wikihow.com/Change-Themes-on-Ubuntu-with-Gnome-Tweak-Tool
   sudo apt-get install paper-icon-theme paper-gtk-theme
   
   https://www.ubuntupit.com/best-ubuntu-themes-will-blow-mind/  
-
 ```
+## Mysql Command:http://www.zbeanztech.com/blog/important-mysql-commands
 # Install mysql in Docker
 ```
   docker pull mysql
