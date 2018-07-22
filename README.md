@@ -76,3 +76,7 @@ Link: https://www.wikihow.com/Change-Themes-on-Ubuntu-with-Gnome-Tweak-Tool
   exit
   exit
   ```
+# Install mysql workbench
+```
+sudo apt-get install mysql-workbench
+```
