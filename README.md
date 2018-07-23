@@ -63,7 +63,9 @@ Link: https://www.wikihow.com/Change-Themes-on-Ubuntu-with-Gnome-Tweak-Tool
 ## Mysql Command:http://www.zbeanztech.com/blog/important-mysql-commands
 # Install mysql in Docker
 ```
-  docker pull mysql
+docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=maainul -e MYSQL_ROOT_HOST=% -d mysql/mysql-server:latest
+
+docker pull mysql
   docker run --name=mysql -e MYSQL_ROOT_PASSWORD=maainul -d mysql
   docker ps -a
   docker start mysql
