@@ -81,6 +81,11 @@ docker pull mysql
   docker-machine ip default
   docker inspect CONTAINER_ID
   ```
+  # Docker command lines
+  ### For view all the information about a container
+ ```
+    docker inspect ecstatic_leakey
+ ```
 # Install mysql workbench
 ```
 sudo apt-get install mysql-workbench
