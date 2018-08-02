@@ -86,6 +86,10 @@ docker pull mysql
  ```
     docker inspect ecstatic_leakey
  ```
+ ### Remove all the container 
+ ```
+ docker rm -vf $(docker ps -a -q)
+ ```
 # Install mysql workbench
 ```
 sudo apt-get install mysql-workbench
