@@ -1,7 +1,12 @@
 # Docker 
-## Install Docker For Ubantu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
-## Install Docker For MAC: https://store.docker.com/editions/community/docker-ce-desktop-mac
-## Install Docker For Windows:https://store.docker.com/editions/community/docker-ce-desktop-windows
+## Install Docker For Ubantu: 
+            https://docs.docker.com/install/linux/docker-ce/ubuntu/
+## Install Docker For MAC: 
+            https://store.docker.com/editions/community/docker-ce-desktop-mac
+## Install Docker For Windows:
+            https://store.docker.com/editions/community/docker-ce-desktop-windows
+## Install mysql in linux:
+            https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/
 ### @Docker Commands
 ```
 ## List Docker CLI commands
