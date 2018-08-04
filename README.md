@@ -7,6 +7,8 @@
             https://store.docker.com/editions/community/docker-ce-desktop-windows
 ## Install mysql in linux:
             https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/
+            For ERROR 1054 (42S22): Unknown column 'Password' in 'field list':
+            https://stackoverflow.com/questions/30692812/mysql-user-db-does-not-have-password-columns-installing-mysql-on-osx
 ### @Docker Commands
 ```
 ## List Docker CLI commands
