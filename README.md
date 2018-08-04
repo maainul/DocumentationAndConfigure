@@ -11,6 +11,8 @@
             https://stackoverflow.com/questions/30692812/mysql-user-db-does-not-have-password-columns-installing-mysql-on-osx
             ERROR 1698 (28000): Access denied for user 'root'@'localhost'
             https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost
+## Remove mysql:
+            https://askubuntu.com/questions/172514/how-do-i-uninstall-mysql
 ### @Docker Commands
 ```
 ## List Docker CLI commands
