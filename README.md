@@ -9,6 +9,8 @@
             https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/
             For ERROR 1054 (42S22): Unknown column 'Password' in 'field list':
             https://stackoverflow.com/questions/30692812/mysql-user-db-does-not-have-password-columns-installing-mysql-on-osx
+            ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+            https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost
 ### @Docker Commands
 ```
 ## List Docker CLI commands
