@@ -1,3 +1,17 @@
+# How to install virtual env and django
+```
+$ mkdir dev3
+$ cd dev3
+$ mkdir trydjango
+$ cd trydjango
+$ ls
+$ virtualenv
+$ virtualenv -p python3 .
+$ ls
+bin  include  lib  pip-selfcheck.json
+$ source bin/activate
+$ pip install django==2.0.7
+```
 # Docker 
 ## Install Docker For Ubantu: 
             https://docs.docker.com/install/linux/docker-ce/ubuntu/
