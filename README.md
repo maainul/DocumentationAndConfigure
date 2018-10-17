@@ -12,6 +12,17 @@ bin  include  lib  pip-selfcheck.json
 $ source bin/activate
 $ pip install django==2.0.7
 ```
+# Create a new project in Django
+```
+cd dev1/trydjango/
+ls
+source bin/activate
+ls
+mkdir src
+cd src
+django-admin startproject trydjango .
+Python manage.py runserver
+```
 # Docker 
 ## Install Docker For Ubantu: 
             https://docs.docker.com/install/linux/docker-ce/ubuntu/
