@@ -23,6 +23,11 @@ cd src
 django-admin startproject trydjango .
 Python manage.py runserver
 ```
+# How to install Python
+```
+sudo apt-get install python3
+sudo apt-get install python3-pip
+```
 # Docker 
 ## Install Docker For Ubantu: 
             https://docs.docker.com/install/linux/docker-ce/ubuntu/
