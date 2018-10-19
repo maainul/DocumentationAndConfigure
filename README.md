@@ -23,6 +23,19 @@ cd src
 django-admin startproject trydjango .
 Python manage.py runserver
 ```
+# Create objects by using shell
+```
+cd dev/trydjango
+ls
+source bin/activate
+ls
+cd src 
+ls
+python manage.py shell
+            from products.models import Product
+            Product.objects.all()
+            product.objects.create(title="this is title 1",description="this is description",price="345.00",summary="this is             summary 1")
+```
 # How to install Python
 ```
 sudo apt-get install python3
