@@ -36,6 +36,10 @@ python manage.py shell
             Product.objects.all()
             product.objects.create(title="this is title 1",description="this is description",price="345.00",summary="this is             summary 1")
 ```
+# Create superuser 
+```
+python manage.py createsuperuser
+```
 # How to install Python
 ```
 sudo apt-get install python3
