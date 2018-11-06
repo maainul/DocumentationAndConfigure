@@ -53,11 +53,29 @@ sudo apt-get install python3-pip
 ## Install Docker For Windows:
             https://store.docker.com/editions/community/docker-ce-desktop-windows
 ## Install mysql in linux:
+```
             https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/
             For ERROR 1054 (42S22): Unknown column 'Password' in 'field list':
             https://stackoverflow.com/questions/30692812/mysql-user-db-does-not-have-password-columns-installing-mysql-on-osx
             ERROR 1698 (28000): Access denied for user 'root'@'localhost'
             https://stackoverflow.com/questions/39281594/error-1698-28000-access-denied-for-user-rootlocalhost
+            
+            sudo apt-get update
+            sudo apt-get install mysql-server
+            sudo ufw allow mysql
+            systemctl start mysql
+            systemctl enable mysql
+            sudo mysql -u root
+            ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
+   ```
+ ## Remove mysql
+   ```
+            sudo apt-get purge mysql*
+            sudo apt-get autoremove
+            sudo apt-get autoclean
+            sudo apt-get remove dbconfig-mysql
+            sudo apt-get dist-upgrade
+            ```          
 ## Remove mysql:
             https://askubuntu.com/questions/172514/how-do-i-uninstall-mysql
 ### @Docker Commands
