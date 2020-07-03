@@ -1,8 +1,11 @@
 # MYSQL cmd
 
 > \sql
+
 > \connect root@localhost
+
 > \use (database name)
+
 > show tables;
 
 
