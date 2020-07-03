@@ -1,3 +1,17 @@
+# MYSQL Command
+
+## MYSQL shell(windows)
+
+#### Start mysql on windows (1st 3 cmd is must)
+
+> \sql
+
+> \connect root@localhost
+
+> \use (database name)
+
+> show tables;
+
 
 ## To login (from unix shell) use -h only if needed.
 
