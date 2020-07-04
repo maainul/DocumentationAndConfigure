@@ -71,7 +71,7 @@ The project properties dialog will appear.
 
 ### Create Class DBConnection and method createConnection
 
-####7 Steps to Connect Application to database
+#### 7 Steps to Connect Application to database
 
 1. Import the package
 
