@@ -25,9 +25,18 @@
 https://mvnrepository.com/artifact/mysql/mysql-connector-java
 
 ### create class and method
+```.xml
+<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
+		</dependency>
 
-
+	</dependencies>
+```
 
 Download MySql from : https://dev.mysql.com/downloads/installer/
 
