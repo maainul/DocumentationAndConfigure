@@ -69,32 +69,56 @@ The project properties dialog will appear.
 
 ![4 jar-file-added](https://user-images.githubusercontent.com/37740006/86494997-42685080-bd99-11ea-9be7-4f91e3503b58.jpg)
 
-#### Create Class DBConnection and method createConnection
+### Create Class DBConnection and method createConnection
+
+####7 Steps to Connect Application to database
+
+1. Import the package
+
+2. Load and Register driver
+
+3. Create Connection
+
+4. Create Statement
+
+5. Execute the query
+
+6. process the results
+
+7. close connection
+
 
 ```.java
-package mainul;
+package com.mainul;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class DBConnection {
+public class MySqlConnection {
 
 	public static void main(String[] args) {
-		DBConnection obj = new DBConnection();
+		MySqlConnection obj = new MySqlConnection();
 		obj.createConnection();
 	}
 
 	public void createConnection() {
 		try {
+
+			String url = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
+			String userName = "root";
+			String password = "root";
+			String query = "select * from users";
+
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false", "root", "root");
+			Connection con = DriverManager.getConnection(url, userName, password);
+			System.out.println("Connection succssful");
+			
 			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from emp");
+			ResultSet rs = stmt.executeQuery(query);
 			while (rs.next())
-				System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3));
+				System.out.println(rs.getString("name"));
 			con.close();
 		} catch (Exception e) {
 			System.out.println(e);
