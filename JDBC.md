@@ -20,6 +20,15 @@
 
 ## 1. Introduction and Installing MySQL 
 
+#### Create Maven project and add dependencies into pom.xml
+
+https://mvnrepository.com/artifact/mysql/mysql-connector-java
+
+### create class and method
+
+
+
+
 Download MySql from : https://dev.mysql.com/downloads/installer/
 
 If any problem see : https://www.youtube.com/watch?v=BOUMR85B-V0&t=2s
