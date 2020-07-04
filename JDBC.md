@@ -201,3 +201,115 @@ public class MYSqlConnection {
 
 ```
 ## 4. Inserting Data into database
+
+```.java
+package com.mainul;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class MySqlConnection {
+
+	public static void main(String[] args) {
+		MySqlConnection obj = new MySqlConnection();
+		obj.createConnection();
+	}
+
+	public void createConnection() {
+		try {
+
+			String url = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
+			String userName = "root";
+			String password = "root";
+			String query = "insert into student(name) values ('fakhrul')";
+
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, userName, password);
+
+			System.out.println("Connection succssful");
+
+			Statement stmt = con.createStatement();
+			int count = stmt.executeUpdate(query);
+			System.out.println(count+" row affected.");
+			
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+}
+```
+
+Result 
+
+```.sql
+-----+-----------+
+| sid | name     |
++-----+----------+
+|   1 | anik     |
+|   2 | abdullah |
+|   3 | kamrul   |
+|   4 | fakhrul  |
++-----+----------+
+```
+#### Insert data with variable
+
+```.java
+package com.mainul;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class MySqlConnection {
+
+	public static void main(String[] args) {
+		MySqlConnection obj = new MySqlConnection();
+		obj.createConnection();
+	}
+
+	public void createConnection() {
+		try {
+
+			String url = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
+			String userName = "root";
+			String password = "root";
+			// new add
+			String name = "lokman"; 
+			// update
+			String query = "insert into student(name) values (?)";
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, userName, password);
+			//update to preparedStatement
+			PreparedStatement stmt = con.prepareStatement(query);
+			// add new
+			stmt.setString(1, name);
+			
+			int count = stmt.executeUpdate();
+			System.out.println(count+" row affected.");
+			
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+}
+```
+Result 
+
+```.sql
+-----+----------+
+| sid | name     |
++-----+----------+
+|   1 | anik     |
+|   2 | abdullah |
+|   3 | kamrul   |
+|   4 | fakhrul  |
+|   5 | lokman   |
++-----+----------+
+```
