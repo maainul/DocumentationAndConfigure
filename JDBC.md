@@ -127,6 +127,20 @@ public class MySqlConnection {
 	}
 }
 ```
+#### if This warning is happend : Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+
+Then change this line of code:
+
+```
+Class.forName("com.mysql.jdbc.Driver");
+```
+
+to
+
+```
+Class.forName("com.mysql.cj.jdbc.Driver");
+```
+
 ### Way 2
 ```.java
 
