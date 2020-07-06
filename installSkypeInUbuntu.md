@@ -2,12 +2,10 @@
 
 ## 1. Download Skype 
 
-> wget https://go.skype.com/skypeforlinux-64.deb
+ From official site : .DEB file
+ 
 
 ## 2. Install Skype
 
-> sudo apt install ./skypeforlinux-64.deb
+> sudo dpkg -i skypeforlinux-64.deb
 
-## 3. Updating Skype
-
-> cat /etc/apt/sources.list.d/skype-stable.list
