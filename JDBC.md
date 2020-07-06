@@ -16,6 +16,7 @@
 2. Connecting Java Program to MySQL Database
 3. Reading Data from MySQL Database
 4. Inserting Data into database
+5. Create Table from java application
 
 
 ## 1. Introduction and Installing MySQL 
@@ -312,4 +313,94 @@ Result
 |   4 | fakhrul  |
 |   5 | lokman   |
 +-----+----------+
+```
+# 4. Create Tables from java application
+
+```.java
+package com.mainul;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class MySqlConnection {
+
+	
+
+	public void createTable() {
+		try {
+			String url = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
+			String userName = "root";
+			String password = "root";
+			
+			String query = "CREATE TABLE Persons (" 
+							+ "PersonID int," 
+							+ "LastName varchar(255)," 
+							+ "FirstName varchar(255)," 
+							+ "Address varchar(255)," 
+							+ "City varchar(255)" 
+							+");";
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,userName,password);
+			
+			Statement stmt =  con.createStatement();
+			stmt.execute(query);
+			
+			System.out.println(" table Successfully created.");
+			stmt.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+
+	public void createConnection() {
+		try {
+
+			String url = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
+			String userName = "root";
+			String password = "root";
+			// new add
+			String name = "lokman"; 
+			// update
+			String query = "insert into student(name) values (?)";
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, userName, password);
+			//update to preparedStatement
+			PreparedStatement stmt = con.prepareStatement(query);
+			// add new
+			stmt.setString(1, name);
+			
+			int count = stmt.executeUpdate();
+			System.out.println(count+" row affected.");
+			
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		MySqlConnection obj = new MySqlConnection();
+		//obj.createConnection();
+		obj.createTable();
+	}
+}
+```
+Result
+
+```.sql
++----------------+
+| Tables_in_mydb |
++----------------+
+| persons        |
+| student        |
+| users          |
++----------------+
+
 ```
