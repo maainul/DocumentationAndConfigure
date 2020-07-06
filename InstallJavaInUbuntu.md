@@ -23,3 +23,12 @@ sudo apt install openjdk-14-jdk-headless  # version 14.0.1+7-1ubuntu1
 Select your java version . ( I am selecting java 14.0.1 latest)
 
 > sudo apt install openjdk-14-jdk-headless
+
+
+# Install Eclipse
+
+Download eclipse from Eclipse site. Extract file and find eclispe-instl
+
+eclispe-inst
+
+Right click on mouse and click on Run button... Run the installer
