@@ -28,3 +28,32 @@ https://www.youtube.com/watch?v=_HJvC3oREaw&t=6s
 #### This command will run STS
 
 > ./SpringToolSuite4 &
+
+
+
+# Create Application Luncher
+
+1. go to the directory of the Spring Tool Suite
+
+2. Create sts.desktop file
+
+3. paste this line into the sts.desktop file
+
+```.desktop
+[Desktop Entry]
+Type=Application
+Name=sts
+Comment=Spring Tool Suite
+Icon=/home/mainul/SpringTools/sts-4.7.0.RELEASE/icon.xpm
+Exec=/home/mainul/SpringTools/sts-4.7.0.RELEASE/SpringToolSuite4
+Terminal=false
+Categories=Development;IDE;Java;
+StartupWMClass=STS
+
+```
+
+4. Right click on sts.desktop file and allow permission. thick the allow button.
+
+5. copy sts.desktop file and paste this location :
+
+		"~/.local/share/applications/".
