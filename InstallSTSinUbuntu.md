@@ -11,6 +11,20 @@ https://www.youtube.com/watch?v=_HJvC3oREaw&t=6s
 3. Create a folder and go to this folder
 
 > mkdir SpringTools
+
 > cd SpringTools/
 
-3. Extract by this command : tar zxvf -/Download/spring-tool-suite-4-4.7.0.RELEASE-e4.16.0-linux.gtk.x86_64.tar.gz
+3. Extract by this command : 
+
+> tar zxvf ~/Downloads/spring-tool-suite-4-4.7.0.RELEASE-e4.16.0-linux.gtk.x86_64.tar.gz
+
+
+4. Run from the terminal :
+
+> ls
+
+> cd sts-4.7.0.RELEASE/
+
+#### This command will run STS
+
+> ./SpringToolSuite4 &
