@@ -3,12 +3,10 @@
 Recursion is a fuction that calls it self.
 ![Screenshot from 2020-07-13 18-10-26](https://user-images.githubusercontent.com/37740006/87313871-556ee380-c544-11ea-827c-1484c8f80005.png)
 ![Screenshot from 2020-07-13 18-10-27](https://user-images.githubusercontent.com/37740006/87313885-59026a80-c544-11ea-8282-7efcd6786241.png)
-![Screenshot from 2020-07-13 18-10-42](https://user-images.githubusercontent.com/37740006/87313894-5b64c480-c544-11ea-814c-7c31308141d7.png)
 ![Screenshot from 2020-07-13 18-10-46](https://user-images.githubusercontent.com/37740006/87313899-5dc71e80-c544-11ea-9eba-6adb179ceebc.png)
 ![Screenshot from 2020-07-13 18-10-50](https://user-images.githubusercontent.com/37740006/87313907-60297880-c544-11ea-9600-285b5dd7f71c.png)
 ![Screenshot from 2020-07-13 18-11-05](https://user-images.githubusercontent.com/37740006/87313921-61f33c00-c544-11ea-98f8-610c3f855249.png)
 ![Screenshot from 2020-07-13 18-12-42](https://user-images.githubusercontent.com/37740006/87313923-63bcff80-c544-11ea-9abe-9929895fe1a3.png)
-![Screenshot from 2020-07-13 18-12-51](https://user-images.githubusercontent.com/37740006/87313926-6586c300-c544-11ea-9ac5-b39ee8f88f20.png)
 ![Screenshot from 2020-07-13 18-13-02](https://user-images.githubusercontent.com/37740006/87313934-67508680-c544-11ea-9c80-f4b31254f483.png)
 ![Screenshot from 2020-07-13 18-13-39](https://user-images.githubusercontent.com/37740006/87313937-691a4a00-c544-11ea-86dc-46d4f403ef67.png)
 ![Screenshot from 2020-07-13 18-13-45](https://user-images.githubusercontent.com/37740006/87313945-6ae40d80-c544-11ea-9537-66f60b517b35.png)
