@@ -1,10 +1,5 @@
 # Install Java  openjdk command
---------------------------------------------------------------
-
-> sudo apt-get install openjdk-8-jdk
-
-# Install oracle Java jdk  command
---------------------------------------------------------------
+---------------------------------------------------------------
 
 > sudo add-apt-repository ppa:linuxuprising/java
 
@@ -23,6 +18,12 @@ sudo apt install openjdk-14-jdk-headless  # version 14.0.1+7-1ubuntu1
 Select your java version . ( I am selecting java 14.0.1 latest)
 
 > sudo apt install openjdk-14-jdk-headless
+
+
+
+# Install Oracle jdk : follow this site :
+
+https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html
 
 
 # Install Eclipse

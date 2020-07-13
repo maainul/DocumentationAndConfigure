@@ -9,3 +9,7 @@
 
 > sudo dpkg -i skypeforlinux-64.deb
 
+
+ # Go to this site and follow this cmd : 
+
+ https://websiteforstudents.com/install-upgrade-skype-ubuntu-17-04-17-10/
