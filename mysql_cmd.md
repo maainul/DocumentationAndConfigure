@@ -1,5 +1,9 @@
 # MYSQL Command
 
+## First Login : 
+
+> mysql -u root -p
+
 ## MYSQL shell(windows)
 
 #### Start mysql on windows (1st 3 cmd is must)
