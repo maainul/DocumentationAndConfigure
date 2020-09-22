@@ -51,9 +51,16 @@ Categories=Development;IDE;Java;
 StartupWMClass=STS
 
 ```
-
 4. Right click on sts.desktop file and allow permission. thick the allow button.
+
+
+
 
 5. copy sts.desktop file and paste this location :
 
 		"~/.local/share/applications/".
+		
+7. My updated solutions is as follows:
+```
+sudo gedit /usr/share/applications/STS3.desktop
+```
