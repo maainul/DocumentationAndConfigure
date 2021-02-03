@@ -44,19 +44,18 @@ mainul@mainul-EliteBook:~/code/mavenProjects/myapp$ mvn archetype:generate
 ## Maven Commands:
 
 ### 1. Generate projects
-	
-		mvn archetype:generate
+	mainul@mainul-EliteBook/myapp$ mvn archetype:generate
 
 ### 2. Compile Maven project(Go to the directory where is pom.xml)
 	
-		mvn compile
+		mainul@mainul-EliteBook:~/code/mavenProjects/myapp$ mvn compile
 
 
 ### 3. package into a jar file
 
-		mvn package 
+		mainul@mainul-EliteBook:~/code/mavenProjects/myapp$ mvn package 
 
 ### 4. Execute the jar file
 
-		mvn -cp target/maventestApp-1.0-SNASHOT.jar com.mainul.maventest.App
+		mainul@mainul-EliteBook:~/code/mavenProjects/myapp$ java -cp target/maventestApp-1.0-SNASHOT.jar com.mainul.maventest.App
 
