@@ -4704,6 +4704,230 @@ Table Features_id(FK)(Multiple select)
 Bookcase design_id(FK)
 Number of Shelves
 Number of Drawers
+Kids Storage Type_id(FK)
+Kids Bed Design_id(FK)
+Kids Bed Size_id(FK)
+Kids Desk Features_id(FK)(Multiple Select)
+Kids Desk Type_id(FK)
+Desk Design_id(FK)
+Desk Features_id(FK)(Multiple select)
+Coasters_id(Fk)
+Chair Arms_id(FK)
+Shade Fabric_id(FK)
+Shade Features_id(Fk)
+Outdoor Table Type_id(FK)
+Bed Type_id(FK)
+Wardrobe Blocks_id(FK)
+Wardrobe Door Type_id(FK)
+Wardrobe Materials_id(FK)
+mattress_features_id(FK)
+mattress_support_system_id(FK)
+mattress_firmness_id(FK)
+Core Construction_id(FK)
+Mattress Feel
+Light Type_id(FK)
+Light Features_id(FK)(Multiple Select)
+Light Bulb Colour_id(FK)
+Light Bulb Type_id(FK)
+Light Bulb Wattage(int)
+
+
+
+
+# Light Bulb Colour
+Red
+Blue
+Green
+White
+Yellow
+
+# Light Bulb Type
+LED
+Halogen
+Xenon
+Fluorescent
+Incandescent Bulbs
+
+
+# Light Features
+Dimmable
+Energy saving
+Colour-Changing
+Flashing
+Programmable
+
+
+
+# Light Type
+Pendants
+Downlights
+Spotlights
+Oyster Lights
+Chandeliers
+Flush Mount Fixtures
+
+
+
+# mattress_features
+Hybrid
+Anti-Static
+Anti-Bacterial
+Anti-Dustmite
+
+
+# mattress_support_system
+Platforms
+X-Support Bed Frame
+Box Springs
+Foundation Supports
+Knickerbocker
+
+
+# mattress_firmness
+
+Firm
+Medium
+Plush
+Very Firm
+
+
+# Core Construction
+Air
+Rubber
+Foam
+Latex
+Memory foam
+Inner Spring/Coil
+
+
+# Wardrobe Blocks
+1 Block
+2 Blocks
+3 Blocks
+
+
+# Wardrobe Door Type
+Door slide
+Side-by-Side door
+
+
+# Wardrobe Materials
+
+Wood
+Fabric
+Particle Board
+Stainless Steel
+other
+
+# Bed Type
+Platform Heel
+Frame
+Storage
+Canopy
+Sleigh
+Loft
+
+
+# Outdoor Table Type
+Dining Table
+Side Table
+Bistro Table
+Coffee Table
+Bar Table
+Picnic Table
+
+# Shade Features
+Adjustable Height
+Push Button
+Collar/Auto Tilt
+Rotational
+Manual Tilt
+
+
+# Shade Fabric
+Vinyl
+Polyester
+Canvas
+Acrylic
+Sunbrella
+Olefin
+Palapa
+
+
+# Chair Arms
+Armless
+Arms Included
+Fixed Arms
+Adjustable Arms
+
+# Coasters
+Yes
+No
+
+# Desk Features
+Ergonomic
+Keyboard Tray
+Lockable Cabinet/Drawer
+Lindsay Paige
+Folding
+Desk with Hutch
+
+
+# Desk Design
+Writing Desk
+Executive Desk
+Desk Shell
+Standing Desk
+Credenza Desk
+Study Desk
+Floating Desk
+Leaning/Ladder Desk
+
+
+
+# Kids Desk Type
+Writing Desk
+Art Desk
+Computer Desk
+Standing Desk
+
+
+
+# Kids Desk Features
+Eco-Friendly
+Ergonomic
+Keyboard Tray
+Desk with Hutch
+Desk Set
+Corkboard
+Casters/Wheels
+Corner Desk
+Locking Cabinet
+Folding
+Adjustable Height
+
+
+
+# Kids Bed Design
+Platform Heel
+Car
+Frame
+Storage
+Canopy
+Sleigh
+
+
+
+# Kids Bed Size
+
+Twin
+TODDLER
+
+# Kids Storage Type
+Toy Bench
+Toy Box
+Toy Bag
+Toy Organiser
 
 
 # Bookcase design
@@ -5006,3 +5230,2546 @@ Basket
 Buckets
 Plastic Totes
 Lids & Accessorie
+
+# Tools, DIY & Outdoor / Fixtures & Plumbing / Kitchen Fittings
+
+Kitchen Fitting Type_id(FK)
+Kitchen Tapware Type_id(FK)
+Plumbing Tapware Finish_id(FK)
+Bathroom Fitting Type_id(FK)
+Plumbing Tapware Features_id(FK)(Multiple select)
+Pipe Fitting Type_id(Fk)
+Tile Type_id(Fk)
+Thickness
+Timber Type_id(Fk)
+Vinyl Type_id(FK)
+Carpet Type_id(FK)
+Floor Adhesive Type_id(FK)
+Window Hardware Type_id(FK)
+Paint Colour Tone_id(FK)
+Paint/Stain Key Features_id(FK)
+Paint Finish_id(FK)
+Paint Product Range Variation_id(FK)
+Paint Type_id(FK)
+Paint Surface Type_id(FK)
+Paint Accessory Type_id(FK)
+Glue Type_id(FK)
+Adhesive Product Type_id(Fk)
+Caulking Type_id(FK)
+Caulking Category_id(FK)
+Sealer Finish_id(FK)
+Sealer Product Range_id(FK)
+Sealer Surface Type_id(FK)
+Sealer Usage_id(FK)
+Paint Volume (L)
+Fastener Head Style_id(FK)
+Fastener Length
+Fastener Surface Type_id(FK)(Multiple select)
+Fastener Type_id(FK)
+Fastener Maximum Weight (kg)
+Size_id(FK)
+Protective Clothing Features_id(FK)(Multiple select)
+Door Hardware Type_id(FK)
+Type of lock_id(FK)
+Safe type_id(FK)
+Peril Type_id(FK)
+Security System Type_id(FK)
+Fire Extinguisher Class_id(FK)
+Fire Extinguisher Features_id(FK)(Multiple select)
+Fire Extinguisher Medium_id(FK)
+Fire Extinguisher Size
+Fire Ladder Length
+Fire Blanket Features_id(FK)(Multiple Select)
+Fire Blanket Length
+Fire Alarm Power Type_id(FK)
+Fire Alarm Type_id(FK)
+Grill Accessory Type_id(FK)
+Outdoor Dining Type_id(Fk)
+BBQ Shape_id(FK)
+BBQ Fuel Type_id(FK)
+Glove Size_id(FK)
+Insect Control Type_id(FK)
+Outdoor Power Tool Type_id(FK)
+Number of Sockets
+Wheels(Yes,No)
+outdoor Power Tool Accessory_id(FK)
+Plumbing Components_id(FK)
+Light Bulb Type_id(FK)
+Light Features_id(FK)(Multiple Select)
+Lumens
+Worklight Type_id(FK)
+Light Bulb Wattage (w)
+Battery Core Type_id(FK)
+Battery Features_id(FK)(Multiple Select)
+Capacity Battery_id(FK)
+Other Electrical Type_id(FK)
+Powerpoint Type_id(FK)
+Electrical Tool Type_id(FK)
+Tool Storage Type_id(Fk)
+Ladder Type_id(Fk)
+Measuring Tool Type_id(FK)
+Tool compatible with Surfaces_id(FK)(Multiple Select)
+Cordless_id(FK)
+Extractor Type_id(FK)
+Welder Type_id(FK)
+No. of included Batteries
+Power Tool Accessory Type_id(FK)
+Torque_id(FK)
+Amperage 
+Saw Type_id(FK)
+Tools Included_id(Fk)(Multiple Select)
+Grinder Type_id(FK)
+BTU Rating
+
+
+# Grinder Type
+Angle Grinder
+Bench Grinder
+Concrete Grinder
+Die Grinder
+Straight Grinder
+
+
+
+
+# Tools Included
+Radio
+Sander
+Blower
+Fan
+Angle Grinder
+Circular Saw
+
+
+# Saw Type
+Circular Saw
+Concrete Saw
+Cut-Off Saw
+Jig Saw
+Miter Saw
+
+
+# Torque
+1000 & Under
+1001 - 2000
+2001 & Up
+
+# Power Tool Accessory Type
+Sets
+Carving & Engraving
+Routing
+Grinding & Sharpening
+Cutting
+Cleaning & Polishing
+Sanding
+Drilling
+
+
+# Welder Type
+Stick
+Arc
+MIG
+Multi-Process
+Plasma Cutter
+
+
+# Extractor Type
+Vacuum
+Air Filtration
+Dust Collector
+
+
+
+# Cordless
+Cordless
+Hybrid
+Corded
+
+# Tool compatible with Surfaces
+
+Ceramic
+Glass
+Wood
+Metal
+Plastic
+Drywall
+Masonry
+Concrete
+Fiber Glass
+Tile
+
+
+# Measuring Tool Type
+Rangefinder
+Caliper
+Radius Guage
+Digital Level
+Spirit Level
+Measuring Tape
+
+# Ladder Type
+Step Ladder
+Multi-Function Ladder
+Telescopic Ladder
+Work Platform
+
+
+# Tool Storage Type
+Dolly
+Tool Box
+Tool Belt
+Tool Wrap
+Trolley
+
+
+
+# Electrical Tool Type
+Voltage Tester
+Digital Meters
+
+
+# Powerpoint Type
+Powerpoints
+Light Switches
+Plugs
+Switch Covers
+Mounting Board
+
+# Other Electrical Type
+Exhaust Fans
+Solar Power Products
+Tv Antenna
+Audio Visual
+Telephone Acessories
+
+
+# Capacity Battery
+AA
+AAA
+C
+D
+Specialty
+6V
+3V
+
+
+# Battery Features
+Specialty
+EVERYDAY
+HI-TECH
+Recharger
+Power-tester
+Rechargeable
+
+
+
+# Battery Core Type
+Silver
+Alkaline
+Li-Ion (Lithium-Ion)
+NiCd (Nickel Cadmium)
+NiMH (Nickel-Metal Hydride)
+
+
+
+# Worklight Type
+Tripod
+Handheld
+
+
+# light Features
+Heavy Duty
+Magnetic Strip
+With Charger
+USB Charger
+Additional Lightbulb
+Strap
+
+# Light Bulb Type
+LED
+Halogen
+Xenon
+Fluorescent
+Incandescent Bulbs
+Specialty Bulbs
+Compact Fluorescent
+
+
+# Plumbing Components
+System
+Valve
+Cannon
+Clip
+Hose
+Dripper
+Nozzle
+Thread
+
+
+
+# outdoor Power Tool Accessory
+Battery
+Recharger
+Fuel Cans & Drums
+Blades
+Trimmer Line
+
+
+# Outdoor Power Tool Type
+Trimmer
+Leaf Blower
+Chainsaws
+Edger
+Augers & Bits
+
+
+# Insect Control Type
+Automatic
+Gel
+Oil
+Spray
+Solar
+
+
+# Glove Size
+1 -220
+221-1000
+1001-above
+100-240 V
+
+
+# BBQ Shape
+Portable
+Korean
+Rack
+camping
+Kettle
+
+
+
+# BBQ Fuel Type
+Charcoal
+Gas
+Electric
+Accessory
+
+# Outdoor Dining Type
+Beach & Picnic Supplies
+Outdoor Dinnerware
+Coolers
+
+
+
+
+# Grill Accessory Type
+Grill Attachments
+Grill Carts
+Grill Cleaning Brushes
+Grill Covers
+Grill Lights & Fixtures
+Grill Maintenance
+Grill Skewers
+
+
+# Fire Alarm Type
+Combination
+Smoke Detector
+Carbon Monoxide Alarm
+Natural Gas & Propane Alarm
+Radon Detector
+Door Release
+
+
+# Fire Alarm Power Type
+Battery
+Plug-in
+Hardwired
+
+
+# Fire Blanket Features
+Quick Release
+Hanging Hook Hole
+
+
+# Fire Extinguisher Features
+Portable
+Disposable
+Rechargeable
+Mounting Bracket
+Rust Resistant
+Wall Hanger
+Pressure Guage
+Outdoor UV Resistant
+No additional Features
+
+
+
+# Fire Extinguisher Class
+A - Ordinary Items
+A:B:C - Multiple Use
+B:C - Multiple Use
+C - Electrical Items
+K - Cooking Oils & Fats
+
+
+
+# Fire Extinguisher Medium
+Foam
+Liquid
+Dry Powder
+Dry Chemical
+Clean Agent
+
+
+
+
+
+
+# Security System Type
+Motion Sensor
+Entry Alarm
+Water Leakage Sensor
+Door Sensor
+Home Security System
+
+
+# Type of lock
+Combination
+Electric
+KEY
+Biometric
+Dual-Lock
+
+
+# Safe type
+Key & Portable Safes
+Fire & Security Safes
+Wall & Floor Safes
+Commercial & Office Safes
+
+
+# Peril Type
+Security
+All
+Fire
+Fire/Water
+
+
+# Door Hardware Type
+Padlocks
+Door Locks
+Door Viewer
+Deadbolt
+Door Bell
+
+
+# Protective Clothing Features
+Waterproof
+Water Resistant
+Hi-Vis
+Weatherproof
+
+
+
+# Tools Diy Size(FK)
+
+Twin
+Full
+Queen
+King
+California- King
+Single
+2 Persons
+3 Persons
+4 Persons
+
+
+
+# Fastener Head Style
+Button
+Hex
+N/A
+Bugle
+Flat
+Hex Nut
+
+
+ 
+# Fastener Surface Type
+Wood
+Machine
+DECK
+Drywall
+Sheet Metal
+Hollow Wall
+Masonry
+Concrete
+
+
+
+# Fastener Type
+Rivets
+Hook & Loop
+Bolts
+Nuts
+Anchors
+
+
+
+# Paint Volume (L)
+1L
+2L
+4L
+3L
+0.25L
+0.4L
+0.5L
+
+
+# Sealer Usage
+General Purpose
+House & Concrete
+Marine
+Stucco & Brick
+Topcoat/Sealant
+
+
+# Sealer Surface Type
+Ceramic
+Wood
+Metal
+Plastic
+Drywall
+Composite/Vinyl
+Concrete/Brick/Masonry
+
+# Sealer Product Range
+Nippon 8000 Advance Sealer
+Nippon Odour-less Wall Sealer
+Nippon Vinilex 5100 Wall Sealer
+Nippon Vinilex 5200 Wall Sealer
+Nippon Vinilex 5400 Wall Sealer
+
+
+# Sealer Finish
+Clear
+Transparent
+Solid
+Crystal Clear
+Semi-Transparent
+
+
+# Caulking Category
+Specialty
+Roofing
+Kitchen & Bathroom
+Multipurpose
+Window & Door
+
+
+# Caulking Type
+Sealants
+Caulk
+Caulk Gun
+
+# Adhesive Product Type
+Velcro
+Duct Tape
+Super Glue
+Contact Glue
+Spray Glue
+
+# Glue Type
+Polyurethane
+Spray
+Specialty
+Contact Cement
+Epoxy/Super Glue
+
+
+# Paint Accessory Type
+Paint Buckets
+Paint Brushes
+Paint Rollers
+Paint Sprayers
+
+# Paint Colour Tone
+Rich & Vibrant
+Soft & Muted
+Metallic
+Classic Whites
+Lime
+
+
+#Paint/Stain Key Features
+Waterproof
+Anti-Fungus
+Water-Based
+Washable
+Dries Clear
+
+
+# Paint Finish
+Clear
+Satin
+Textured
+Solid
+Gloss
+Eggshell
+
+
+# Paint Product Range Variation
+PureAir
+Ambiance All
+Ambiance All (Rich Matt)
+Ambiance Linen
+Ambiance Marble
+Ambiance Metallic Gold
+
+
+# Paint Surface Type
+Glass
+Wood
+Metal
+Windows
+Ceiling
+Walls
+
+
+# Paint Type
+Interior Wall Paint
+Interior Paint Samples/Testers
+Ceiling Paint
+Cabinet & Countertop Paint
+Furniture & Small Project Paint
+Exterior Wall Paint
+
+
+# Window Hardware Type
+Frame
+SCREEN
+Tint
+Sealing Strips
+Privacy Film
+
+
+# Floor Adhesive Type
+Additives
+Tile Adhesive
+Vinyl Adhesive
+Wood/Laminate Adhesive
+Carpet Adhesive
+Adhesive Removers
+
+
+# Carpet Type
+Runner
+Utility
+Tiles
+
+
+# Vinyl Type
+Tiles
+Planks
+Sheet Flooring
+
+
+# Timber Type
+Bamboo
+Cork
+Hardwood
+Laminate
+Timber
+Underlay
+Decking
+
+
+
+# Tile Type
+Wall
+Decorative
+Floor
+
+
+# Pipe Fitting Type
+Black
+Plastic
+Copper
+Brass
+Cast Iron
+Vinyl
+
+
+
+# Plumbing Tapware Features
+LED light
+Touchless/Touch On
+Water Saving
+Adjustable Flow Rate
+Built-in Water
+Fingerprint/Spot Resistant
+Ceramic Disc Valves
+Pause Function
+Pull-out Sprayer
+
+
+# Bathroom Fitting Type
+Mirror
+Basin
+Cabinet
+Handles
+Toilet Seat
+Vanity
+Towel Rack
+
+
+# Plumbing Tapware Finish
+Black
+Gold
+White
+Bronze
+Iron
+Copper
+
+# Kitchen Tapware Type
+Bar Faucets
+Bridge Faucets
+Pot Fillers
+Pull Down Faucets
+Pull Out Faucets
+Standard Spout Faucets
+
+
+# Kitchen Fitting Type
+Cabinet
+Handles
+Hinges
+Doors
+Sinks
+
+# Laundry & Cleaning / Laundry / Laundry Baskets & Hampers
+
+Dryiing Rack Materials_id(FK)
+Drying Rack No. of Rails
+Spinmop Features_id(FK)
+Broom Type_id(FK)
+Bin Type_id(FK)
+
+# Bin Type
+Kitchen Bin
+Bathroom Bin
+Waste Paper Bin
+Recycling Bin
+
+
+# Broom Type
+Broom
+Mop
+Sweeper
+Multi-use
+Dustpan
+
+
+# Spinmop Features
+Steppable
+Spinnable
+Sprayable
+With Bucket
+Without Bucket
+
+
+
+# Dryiing Rack Materials
+Wood
+Plastic
+Stainless Steel
+
+
+# Kitchen & Dining / Kitchen & Table Linen / Placemats & Coasters
+
+Linen Fabric_id(FK)
+Shape_id(Fk)
+Linen Accessory Type_id(FK)
+Storage Tub Features_id(FK)(Multiple Select)
+Cookware material_id(FK)
+Cookware Capacity_id(FK)
+Cookware Features_if(FK)(Multiple select)
+Cookware Shape_id(FK)
+Baking Dish Type_id(FK)
+Baking Utensil Type_if(FK)
+Cake Pan Type_id(FK)
+Baking Tray Type_id(FK)
+Roasting Tray Type_id(FK)
+Cookware Diameter (cm)
+Stovetop Kettle Features_id(FK)(Multiple Select)
+Specialty Pan Type_id(FK)
+Pan Type_id(FK)
+Dutch Oven Type_id(FK)
+Cookware Finish_id(FK)
+Cutlery Type_id(FK)
+Dinner Plate Type_id(FK)
+Cookware material_id(FK)
+Glassware Type
+Service Size(int)
+Wine Glass Type_id(FK)
+Specialty Glass Type_id(FK)
+Jug Type_id(FK)
+Barware Type_id(FK)
+Serveware Compartments(1,2,3,4)
+Serving Bowl Type_id(FK)
+Serving Tool Type_id(FK)
+Coffee Maker Type_id(FK)
+Coffee Accessory Type_id(FK)
+Tea Accessory Type_id(FK)
+Teapot Capacity_id(FK)
+Coffee/Tea Server Type_id(FK)
+Measuring Tool Type_id(FK)
+Utensil Features_id(FK)
+Can Opener Type_id(FK)
+Peeler Type_id(Fk)
+Strainer Type_id(FK)
+Fruit Tool Type_id(FK)
+Cheese Tool Type_id(FK)
+Kitchen Board Materials_id(FK)
+Kitchen Board Type_id(FK)
+Kitchen Board Features_id(FK)(Multiple select)
+Knife Type_id(FK)
+Knife Accessory Type_id(FK)
+Pasta Tool Features_id(FK)
+Pasta Maker Tools_id(FK)
+Meat Tool Type_id(Fk)
+Cooking Utensil Type_id(FK)
+Thermometer Type_id(FK)
+Thermometer Features_id(FK)(Multiple Select)
+Oil Tool Type_id(FK)
+Garlic Tool Type_id(FK)
+Spice Tool Type_id(FK)
+Salt & Pepper Tool Type_id(FK)
+
+# Salt & Pepper Tool Type
+Sets
+Mills
+Pinches
+Cellars/Boxes
+Shakers
+
+# Spice Tool Type
+Spice Grinder
+Spice Rack
+Spice Mill
+
+
+# Garlic Tool Type
+Garlic Keeper
+Garlic Presser
+Garlic Peeler
+Garlic Roaster
+Garlic Cellar
+
+
+# Oil Tool Type
+Bottles
+Cruet/Dispenser
+Oil Sprayer
+
+# Thermometer Features
+Remote
+Digital
+Programmable
+Instant-read
+Countdown Timer
+Indoor/Outdoor Connection
+Power Backup
+
+
+
+# Thermometer Type
+Candy
+Timers
+Instant-read
+Meat
+Oven Thermometer
+Refrigerator Thermometers
+
+
+# Cooking Utensil Type
+Sets
+Spoons
+Ladle
+Spatula
+
+
+
+
+# Meat Tool Type
+Thermometers
+Meat Grinder
+Meat Tenderizer
+Meat Slicer
+Sausage Stuffer
+
+
+
+# Pasta Tool Features
+Recipe Book Included
+Adjustable Thickness
+Attachment Included
+Cleaning Brush Included
+
+
+# Pasta Maker Tools
+Pasta Roller
+Pasta Rack
+Pasta Roller Attachment
+Pasta Cutter
+Pasta Press
+
+# Knife Accessory Type
+Knife Block
+Knife Sharpener
+Knife Case
+Knife Bar
+In Drawer Knife Rack
+
+
+
+
+# Knife Type
+Chinese Chefs Knives & Cleavers
+Chinese Vegetable Knives
+Deba Knives
+Gyutou Knives
+Santoku Knives
+
+# Kitchen Board Features
+Reversible
+Feet
+Juice Grooves
+Hand Grips/Finger Grooves
+Finger
+Knife/Mezzaluna included
+Hooks to Counter
+
+
+
+# Kitchen Board Type
+General Purpose
+Cheese Board
+Cutting Board Set
+Meat Cutting Board
+Over-Sink Board
+
+# Kitchen Board Materials
+Glass
+Wood
+Plastic
+Bamboo
+Marble/Granite
+
+# Cheese Tool Type
+Cheese Slicer
+Cheese Knife
+Rotary Grater
+Cheese Plane Slicer
+Mill Grinder
+Cheeseboard
+
+
+
+# Fruit Tool Type
+Manual Juicer
+Corers/Pitters
+Melon Ballers
+Cleaning Brushes
+Masher
+Ricer
+
+# Strainer Type
+Colander
+Food Strainer
+Sifter
+Splatter Screen
+Salad Spinner
+
+# Peeler Type
+Spiralizer
+Grater
+Peeler
+Slicer
+Chopper
+
+# Can Opener Type
+Electric
+Manual
+Jar Opener
+Tabletop
+
+
+
+
+# Utensil Features
+Automatic
+Smooth
+Commercial
+Heavy-Duty
+Easy-Grip
+Safety
+Non coated
+
+
+# Measuring Tool Type
+Measuring Cup
+Measuring Spoon
+Measuring Jug
+Kitchen Scales
+
+
+# Coffee/Tea Server Type
+Teapot
+Tea Sets
+Tea-for-One Sets
+Coffee Serving Sets
+Coffee Servers
+
+
+# Teapot Capacity (Cups)
+1 - 2 cups
+3-4 cups
+5-6 cups
+7-8 cups
+9-10 cups
+11+ cups
+
+
+
+# Tea Accessory Type
+Tea Strainer/Diffuser
+Tea Storage Chest
+Matcha Bowls & Whisks
+Teapot Warmers
+Tea Bag Coasters
+
+
+# Coffee Accessory Type
+Coffee Grinder
+Coffee Tamper
+Capsule Holder
+Reusable Capsule Filter
+Coffee Filters
+Cappucino Decorating Tool
+
+# Coffee Maker Type
+Coffee Dripper
+Coffee Press
+Stovetop Espresso
+Coffee Plunger
+
+
+# Serving Tool Type
+Salad Servers
+Cake Servers
+Serving Spoons
+Serving Fork
+
+
+# Serving Bowl Type
+Serving Bowl
+Salad Bowl
+Fruit Bowl/Basket
+Candy/Nut Bowl
+Vegetable Bowl
+Pasta Dish
+
+
+# Barware Type
+Bar Strainers
+Bar Tool Sets
+Bottle Holders & Carriers
+Bottle Stoppers & Pourers
+
+
+# Jug Type
+Pitcher
+Carafe
+Punch Bowl
+
+
+# Specialty Glass Type
+Drinkware Sets
+Old Fashioned Glasses
+Beer Glasses
+Highball Glasses
+Brandy Glass
+
+# Wine Glass Type
+Wine Glass
+Champagne Flute
+Stemless Wine Glass
+White Wine Glass
+
+
+
+# Cookware material
+Ceramic
+Glass
+Silicone
+Copper
+Aluminium
+Cast Iron
+Porcelain
+
+
+# Dinner Plate Type
+Bread & Butter Plates
+Charger & Service Plates
+Dessert Plates
+Dinner Plates
+Salad Plates
+
+
+
+# Cutlery Type
+Forks
+Table Knives
+Spoons
+Cutlery Sets
+Chopsticks & Rests
+
+
+
+# Cookware Finish
+Stainless Steel
+Non-Stick
+Ceramic
+Mirror Satin
+Enamel
+Brushed
+
+
+
+# Dutch Oven Type
+Dutch Oven
+Tagine
+Brazier
+
+
+# Pan Type
+Skillet
+Saucepan
+Fry Pan
+Crepe Pan
+Saute Pans
+
+
+# Specialty Pan Type
+Crepe Pan
+Paella Pan
+Canning
+Fondue Set
+Fish Poacher
+
+
+# Stovetop Kettle Features
+Induction Safe
+Eco-Friendly
+Enameled
+Whistle
+Rapid Boil
+Infuser
+Water Level Indicator
+Limescale Filter
+
+# Roasting Tray Type
+Roasting Tray
+Roasting Rack
+Vertical Roaster
+Broiler Pan
+
+# Baking Tray Type
+Baking Tray
+Baking Mat
+Baking Sheet
+Baking Dish
+Baking Pan
+
+
+#Cake Pan Type
+Molds
+Cake Pan
+Springform Pan
+Angel Food Pan
+Cake Rings
+
+# Baking Utensil Type
+rolling pin
+Cookie Cutter
+Cookie Press
+Mould
+Pastry Roller
+Cooking Torch
+Cooling Rack
+
+
+
+# Baking Dish Type
+Casserole Dish
+Ramekin
+Souffle
+Au Gratin
+CrÃ¨me Brulee
+
+# Cookware Shape
+Square
+Round
+Oval
+Rectangular
+Holiday
+Novelty
+
+
+# Cookware Features
+Non-Stick
+Glass-Lid
+Includes Lid
+Dishwasher Safe
+Induction Safe
+Pour Spout
+Helper Handle
+PFOA Free
+Eco-Friendly
+Enameled
+Oven Safe
+Hard-Anodized
+
+
+# Cookware Capacity
+1L & Under
+1.1L - 2L
+2.1L - 3L
+3.1L & Up
+4L
+5L
+6L
+
+# Cookware material
+Ceramic
+Glass
+Silicone
+Copper
+Aluminium
+
+
+#  Storage Tub Features
+Stackable
+Stainless Steel
+Thermal
+Labels
+No leakage
+Space-saving
+With Lid
+Container Set
+
+# Linen Accessory Type
+Napkin Rings
+Placecard/Namecard holder
+Tablecloth Weights
+Tablecloth Clips
+Pot Rack Type_id(FK)
+
+# Pot Rack Type
+Hanging
+Free-standing
+Countertop
+Wall-Mounted
+Chandelier
+
+
+# Shape
+Rectangle
+Round
+Oval
+Octagon
+Square
+
+# Linen Fabric
+Silk
+Plastic
+Nylon
+Cotton
+Linen
+Vinyl
+
+
+# Stationery & Craft / Art Supplies / Artist Brushes & Tools
+
+Painting Brush Types_id(FK)
+Size of Painting Brush_id(FK)
+Types of Easels_id(FK)
+Types of Paper_id(FK)
+Calculator Power Source_id(FK)
+Labelmaker Type_id(FK)
+Labelmaker Printing Type_id(FK)
+Stationary_Size_id(FK)
+Board Type_id(FK)
+Clip Type_id(FK)
+Desk Organizer Type_id(FK)
+Paper Type_id(Fk)
+Binder Type_id(FK)
+Filing Type_id(FK)
+Fastener Type_id(FK)
+Cutter Type_id(FK)
+Staple Type_id(FK)
+Number of Pieces in Set
+Event_id(FK)
+Pencil Type_id(FK)
+Pencil Hardness_id(FK)
+Marker Type_id(FK)
+Pen Thickness_id(FK)
+Correction Type_id(FK)
+Pen Type_id(FK)
+Envelope Type_id(FK)
+Sticky Label Type_id(FK)
+Sticky Label Feature_id(FK)(Multiple Select)
+Carton_id(FK)
+Paper Features_id(FK)
+Number of Sheets per Ream(int)
+Cartridge Printer Paper Type_id(FK)
+Flag Type_id(Fk)
+Notebook Type_id(FK)
+number_of_page(int)
+Notebook Features_id(FK)(Multiple select)
+Diary Type_id(FK)
+
+# Diary Type
+Address Book
+Calendars
+Diaries
+Organizers
+Wall Planners
+Desk Mat
+Desk Pad
+
+
+
+# Notebook Features
+Leather Bound
+Lockable
+Pen Holder
+Pen Incuded
+Hard Cover
+
+
+
+
+
+
+# Notebook Type
+Exercise Books
+Ring Notebook
+Spiral Notebook
+Writing Pad
+Lecture Book
+Subject Book
+
+
+# Flag Type
+Post-it
+Notes
+Flags
+Tags
+
+
+
+# Cartridge Printer Paper Type
+Carbon
+Plain
+Half Shadow
+Adhesive
+
+
+# Paper Features
+
+Carbon Transfer
+Self Adhesive
+100% Recycled Paper
+
+
+
+# Carton
+Ream
+Carton
+
+
+
+# Sticky Label Feature
+Heavy Duty
+Compatible with Inkjet Printer
+Tamper Evident
+Multi-use/Removable
+Compatible with Laser Printer
+
+
+# Sticky Label Type
+Address Label
+Round Stickers
+File & Folder Labels
+Organisation & Storage Labels
+Heavy Duty Labels
+Write On Labels
+
+
+
+# Envelope Type
+Paper Envelope
+Air Bubble Mailer Bag
+Padded Mailer Bag
+Plastic Mailer Bag
+Mailing Tube
+
+
+# Pen Type
+Fountain Pens
+Roller Ball Pens
+Ball Pens
+Mechanical Pencils
+Multifunction Pens
+
+
+
+
+# Correction Type
+
+
+# Pen Thickness
+0.3mm
+0.5mm
+0.7mm
+0.9mm
+3mm
+6mm
+
+# Marker Type
+Permanent
+Highlighter
+Whiteboard
+Paint & Liquid Chalk Markers
+Water Chalk
+
+
+# Pencil Hardness
+2B
+B
+3B
+4B
+HB
+Learner
+
+
+# Pencil Type
+Mechanical Pencils
+Coloured Pencils
+Graphite & Lead Pencils
+Pencil Sharpeners
+Mechanical Pen Refill
+
+
+
+
+# Event
+Romance
+Wedding
+Birthday
+Anniversary
+Graduation
+Christening
+
+
+# Staple Type
+Staple
+Staple Remover
+Bullets
+Punches
+
+# Cutter Type
+Blades
+Scissors
+Paper Cutters
+Mats
+Letter Openers
+
+
+
+
+# Fastener Type
+Paper
+Rings
+Tag
+Tapes
+
+
+# Binder Edge Type
+Landscape
+Portrait
+
+# Filing Type
+Document Box File
+Display Book
+Display Book Refill
+Document Box
+Document Wallet
+Expansion File
+
+# Binder Type
+Insert Binder
+Lever Arch Binder
+Ring Binder
+Sheet Protector
+Dividers
+
+# Paper Type
+A0
+A1
+A2
+A3
+A4
+A5
+A6
+
+
+
+# Desk Organizer Type
+Card Stands
+Desk Organizers
+Brochure Holders
+Magazine Holder
+Document Tray
+
+
+# Clip Type
+Paperclip
+Binder Clip
+Bullnose Clips
+Split Pin
+Treasury Tag
+Thumb Tack
+Push Pin
+
+
+
+# Board Type
+White Board
+Flip Chart
+Easels
+Memo Board
+Clipboard
+Pin Board
+
+
+# Stationary_Size
+Twin
+Full
+Queen
+King
+California- King
+Single
+2 Persons
+3 Persons
+4 Persons
+> 4 Persons
+
+# Labelmaker Printing Type
+Direct Thermal
+Dye Sublimation
+Thermal Transfer
+
+# Labelmaker Type
+Label Maker
+Label Tape
+Label Maker Cutter
+Label Maker Battery
+Thermal Transfer Label Tape
+
+
+# Calculator Power Source
+Battery
+Multi-function type
+Solar
+Office business
+Battery and Solar
+Graphics programming model
+Other
+
+# Types of Paper
+Wood-based papers
+Cotton rag
+Coated papers
+
+# Types of Easels
+A-frame easels
+H-frame easels
+Giant easels
+Convertible easels
+Single mast easels
+
+
+
+# Size of Painting Brush
+small-size
+medium-size
+large-size
+
+# Painting Brush Types
+Round Brush.
+Flat Brush
+Bright Brush
+Filbert Brush
+Angular Brush
+Fan Brush
+
+
+# Bedding & Bath / Bath / Bathroom Counter Storage
+
+Mounting_id(FK)
+Transparency(Yes,No)
+No of Shelves(1,2,3,4,5)
+Washable Type_id(FK)
+Towel Material_id(FK)
+Shelf Design_id(FK)
+Curtain Material_id(FK)
+Curtain Features_id(FK)(Multiple Select)
+Towel Size_id(FK)
+Pillow Shape_id(FK)
+Bed Accessory Type_id(fk)
+Thread Count
+Bed Sheet Type_id(FK)
+Filling_id(FK)
+Linen Fabric_id(FK)
+
+# Linen Fabric
+Silk
+Plastic
+Nylon
+Cotton
+Linen
+
+
+# Filling
+Cotton Feathers
+Flannel
+Foam
+Microfiber
+Memory foam
+
+
+# Bed Sheet Type
+Set
+Flat Sheet
+Fitted Sheet
+Bed Runner
+Bed Skirt
+
+
+# Bed Accessory Type
+Clips
+Mosquito Net
+Sheet Fastener
+Edge Guard
+
+# Pillow Shape
+Standard
+Specialty
+European
+Ergonomic
+Floor
+
+
+# Towel Size
+Bath Mat
+Face Towel
+Hand Towel
+Bath Towel
+Bath Sheet
+King Bath Towel
+
+# Curtain Features
+
+Outdoor
+Sheer
+Blackout
+Liner Included
+Liner Not Included
+Hooks Included
+Weighted Hem
+Liner Not Required
+Noise Reducing
+Thermal Insulation
+Semi-Opaque
+
+# Curtain Material
+
+Other
+Satin
+Vinyl
+100% cotton
+Polyester
+Jacquard
+Cotton Blend
+
+
+# Shelf Design
+
+Turkish Cotton
+100% Cotton
+Bamboo Rayon
+Egyptian-Quality Cotton
+Microfibre
+Terry Cloth
+
+# Towel Material
+Turkish Cotton
+100% Cotton
+Bamboo Rayon
+Egyptian-Quality Cotton
+Microfibre
+Terry Cloth
+
+
+# Washable Type
+Machine Washable
+Hand Washable
+Dry Clean
+
+# Mounting
+Mounted
+Non-mounted
+
+# Digital Goods / Daraz Gift Cards
+
+Valid To (dd/mm/yyyy)
+Valid From (dd/mm/yyyy)
+sms or email_id(FK)
+City
+Location Address
+Type of Restaurant_id(FK)
+Store
+
+
+# Type of Restaurant
+Fine Dining
+Fastfood
+Drinks & Nightlife
+Café
+Buffet
+Happy Hours
+
+
+# sms or email
+None
+Sms
+Email
+
+
+# Watches Sunglasses Jewellery / Eyewear / Sunglasses / Men
+
+
+Frame type_id(FK)
+Eyewear size_id(FK)
+Sunglasses lens type_id(FK)(Multiple Select)
+Lens classification_id(FK)
+Lens Color_id(FK)
+Lens quality_id(FK)
+Main stone_id(FK)
+Jewellery Material_id(FK)(Multiple Select)
+Gold Carat_id(FK)
+Ring Size_id(FK)
+Diamond Clarity_id(Fk)
+Name of Stones Used
+Diamond Carat size
+Diamond cut_id(Fk)
+Main stone_id(FK)
+Gold Material_id(FK)(Multiple Select)
+Body jewellery_id(FK)
+Jewellery Packaging and Display Type_id(FK)
+Bracelet Size_id(FK)
+Earring Size_id(FK)
+Dial Size_id(FK)
+Movement_id(FK)
+Strap Material_id(FK)
+Watch Movement Country_id(FK)
+Watch Case Shape_id(FK)
+Watch Type_id(FK)
+Watch Case Size_id(FK)
+Watch Feature_id(FK)(Multiple Select)
+
+# Watch Feature
+Alarm
+Countdown
+Altimeter
+MP3 player
+
+
+# Watch Case Size
+Under 20mm
+21 to 24mm
+30mm to 34mm
+50mm & Over
+
+
+
+# Watch Type
+Digital
+Choronograph
+Analouge
+
+
+
+# Watch Case Shape
+Oval
+Heart-shaped
+Retangle
+Round
+Square
+
+
+
+# Watch Movement Country
+Switzerland
+Japan
+China
+Other
+U.S.
+
+
+
+# Strap Material
+Steel
+Stainless Steel
+Brass
+Artificial Leather
+Alloy
+Wolfram steel
+
+
+
+# Movement
+Digital
+Quartz
+Leather
+Belt
+LED
+
+
+# Dial Size
+Other
+34mm
+22mm
+44mm
+40mm
+32mm
+
+
+
+# Earring Size
+2 MM
+3 MM
+4 MM
+5 MM
+6 MM
+
+
+# Bracelet Size
+16 CM
+17 CM
+18 CM
+19 CM
+20 CM
+21 CM
+
+
+
+# Jewellery Packaging and Display Type
+Trays
+Gift Boxes
+Pouches
+Jars & Containers
+Bags
+
+
+# Body jewellery
+Body tattoo/ jewellery tatto
+Plug & Tunnel
+Belly Chains
+Navel & Bell button rings
+Nose rings & studs
+Belly piercing
+
+
+# Gold Material
+
+Gold Filled
+Iron
+None
+Platinum Plated
+Rhodium
+Rhodium plated
+Silver
+Silver plated
+
+# Main stone
+Tourmaline
+Spinel
+Artificial opal
+Enhydros
+Spodumene
+Lapis lazuli
+
+
+# Diamond cut
+Good
+Excellent
+Very good
+Fair
+Poor
+
+
+# Diamond Clarity
+IF
+FL
+VVS1/VVS2
+VS1/VS2
+SI1/SI2
+I1, I2, I3
+
+
+# Ring Size
+22
+6
+12
+13
+5
+11
+10.5
+
+# Gold Carat
+18/K
+21/K
+22/K
+24/K
+
+# Jewellery Material
+suede leather
+Canvas
+Platinum
+Bamboo
+Rose Gold
+
+
+# Main stone
+Tourmaline
+Spinel
+Artificial opal
+Enhydros
+Spodumene
+
+# Lens quality
+
+Standard
+Basic
+Premium
+
+
+
+# Lens Color
+Blue grey
+Tawny
+Light pink
+Light blue
+Purple
+
+
+
+# Lens classification
+Polarized
+Explosion-proof
+Anti-UV
+Colorful
+Non Myopia
+
+
+# Sunglasses lens type
+Polarized
+Classic sunglasses
+Mirrored
+Gradient
+Light adjusting
+
+
+# Eyewear size
+M
+S
+L
+One size
+
+# Frame type
+Foldable
+Full rim
+Half rim
+Rimless
+
+# Mother & Baby / Baby Personal Care / Aromatherapy
+
+Type of Bodywash_id(FK)
+Thermometer Type_id(FK)
+Dietary Requirements_id(FK)
+Maximum Shelf Life_id(FK)
+Dietary Requirements_id(FK)
+Flavor Nutrition_id(FK)
+Count (pieces)
+Washable(yes,No)
+Type of Breastpumps_id(FK)
+Portable(Yes,No)
+Type diaper_id(FK)
+Type of Diaper Bags_id(FK)
+Assembly Required(Yes, NO)
+Baby Recommended Age_id(Fk)
+Weight Capacity_id(Fk)
+Baby Recommended Age(Id)(Multiple Select)
+Baby Weight_id(FK)
+Type of Baby Carrier_id(FK)
+Clothing Decoration_id(FK)
+Listed Year Season_id(FK)
+Clothing Style_id(Fk)
+Sleeve Length_id(Fk)
+Collar Type_id(FK)
+Top Style_id(Fk)
+Sleeves_id(Fk)
+Blouse Sleeve Style_id(FK)
+Bottom Style_id(FK)
+Pants Fly_id(FK)
+Pant Style_id(FK)
+Length_id(FK)
+Waist Type_id(FK)
+Clothing Decoration_id(FK)
+Bra Type_id(FK)
+Intimate Type_id(FK)
+Swimwear Style_id(FK)
+Swimwear Type_id(FK)
+Dress Length_id(FK)
+Dress Shape_id(FK)
+
+# Dress Shape
+Babydoll/Smock Dresses
+Cami/Slip Dresses
+Pencil Dresses
+Shift Dresses
+Swing Dresses
+T-Shirt Dresses
+Tulip Dresses
+
+# Dress Length
+Short
+Long
+Mini
+Midi
+Knee Length
+Ankle Length
+Floor Length
+
+
+
+# Swimwear Type
+Bikini Sets
+Bikini Tops
+Bikini Bottoms
+Swimsuits
+Tankinis
+Training
+
+
+# Swimwear Style
+One Piece
+Two Piece
+Training
+
+
+# Intimate Type
+Maternity Bras
+Nursing Bras
+Panties
+Nightwear
+
+
+# Bra Type
+Backless Bras
+Non-Padded
+Minimizer Bras
+Push Up Bras
+
+
+# Clothing Decoration
+Feathers
+Beading
+Appliques
+Bow
+Button
+
+
+# Waist Type
+Elasticated waist
+High
+Low
+Regular
+
+# Length
+Ankle
+Full Length
+Cropped
+
+# Pant Style
+Slim
+Straight
+Bootcut
+Shorts
+
+
+# Pants Fly
+Button
+Elasticated
+Mock
+Zip
+
+
+# Bottom Style
+Jeans
+Leggings
+Pants
+Skirts
+Shorts
+
+
+# Blouse Sleeve Style
+Cap Sleeve
+Mandarin sleeve
+Bubble sleeve
+Puff sleeve
+Cuffed Sleeve
+
+
+# Sleeves
+3/4 Sleeve
+Long Sleeve
+Sleeveless
+Short Sleeve
+
+
+# Top Style
+Blouses & Shirts
+T-Shirts
+Tunics
+Tanks & Camisoles
+Sweaters
+Hoodies
+Cardigans
+
+
+# Collar Type
+High-neck
+O-Neck
+V-neck
+Shirt Collar
+
+
+# Sleeve Length
+Sleeveless
+Long Sleeve
+Short Sleeve
+3/4 Length
+Cap Sleeve
+
+# Clothing Style
+Sport & Street
+Business
+Surf & Beach
+Boho
+European
+
+
+
+
+# Listed Year Season
+Spring
+Autumn
+Summer
+Winter
+2017
+
+
+# Clothing Decoration
+Feathers
+Beading
+Appliques
+Bow
+Button
+
+
+
+
+# Type of Baby Carrier
+Front
+Back
+Hipseats
+Multifunctional
+360 degrees. Front, Back and Side
+
+
+
+# Baby Weight
+0-4kgs
+4-6kgs
+6-12kgs
+>12kgs
+
+
+# Weight Capacity
+1-5 Kg
+6-10 Kg
+11-15 Kg
+16-20 Kg
+21-25 Kg
+
+# Baby Recommended Age
+
+0-6 mths
+6-12mths
+12-24mths
+1-3 years old
+3-5 years old
+5-7 years old
+0-4 Years
+2 – 6 Years
+
+
+
+# Type of Diaper Bags
+Fashion
+Messenger
+Tote
+Backpacks
+Dad's Bag
+
+# Type diaper
+Waterproof
+Pants/Pull-ups
+Taped
+Swims
+Washable
+
+
+
+# Type of Breastpumps
+Manual
+Single Electric
+Double Electric
+
+
+
+
+
+# Flavor Nutrition
+Chocolate
+Natural
+Vanilla
+Strawberry
+Honey
+Others
+
+
+# Dietary Requirements
+Organic
+Speciality
+Gluten-Free
+Allergy
+Lactose-Free
+Sugar free
+
+
+# Maximum Shelf Life
+N/A
+1 - 6 days
+1 week
+2 weeks
+3 weeks
+1 months
+2 - 4 months
+4 - 6 months
+
+# Dietary Requirements
+Organic
+Speciality
+Gluten-Free
+Allergy
+Lactose-Free
+Sugar free
+
+
+
+# Thermometer Type
+Rectal
+Oral
+Under-the-arms
+Infrared
+EAR
+Non-contact Body Infrared Thermometer
+
+
+
+
+
+# Type of Bodywash
+Organic
+Hypoallergenic
+Fragrance-Free
+Paraben-free
+Soap-free
+
+# Livestock / Cow
+
+Cow Age_id(FK)
+Number of Teeth(6,5,4,3,2)
+Meat Weight_id(Fk)
+Breed_id(FK)
+
+
+# Meat Weight
+130-140 kg
+120-130 kg
+75-85 kg
+90-110 kg
+
+# Breed
+Bhutani
+Nepali
+Cross
+Native
+
+
+# Cow Age
+36 Months
+48 Months
+30 Months
+24 Months
+
+# Toys & Games / Traditional Games / Trading Card Games / Lots
+
+Toys Features
+Toys Characters
+Trend
+Interest_id(FK(Multiple Select)
+Game Type_id(FK)
+Character_id(FK)
+Type of Playset_id(FK)
+Types of S.T.E.M Toys_id(FK)
+Sports Type_id(FK)
+Size Stuffed Toys_id(FK)
+Animal Type_id(FK)
+Type of Stuffed Toys_id(FK)
+
+# Type of Stuffed Toys
+
+Animals
+Pillows
+Backpacks & Purses
+Puppets
+# Animal Type
+Squirrels
+Monsters
+Others
+Sheep
+Goats
+Cows
+Pigs
+Dragons
+Lions & Big Cats
+
+
+# Size Stuffed Toys
+Under 5 Inches
+7 to 9.9 Inches
+5 to 6.9 Inches
+10 to 14.9 Inches
+15 to 19.9 Inches
+20 Inches & Above
+
+# Sports Type
+Football
+Basketball
+Golf
+Baseball
+Hockey
+Soccer
+
+# Types of S.T.E.M Toys
+
+
+# Type of Playset
+Cooking & Baking
+Dishes & Tea Sets
+Kitchen Play
+Pots & Pans
+Food Appliance
+Play Food
+
+# Character
+Rody
+Gundam
+Big Time Rush
+Bakugan
+
+# Game Type
+Aerospace Model
+Animal And Plant
+Army Model
+Bag/bags
+Beach Toys
+
+
+# Interest
+Children Development
+City Simulation
+Strengthen fantasy
+Memory Training And Observation
+Strengthen Muscles
+
+# Pet Supplies / Small Pet / Habitats & Accessories 
+
+Type of Small Pet Habitat Accessories_id(FK)
+Type of Small Pet Food_id(FK)
+Type of Bird Cage Accessories_id(FK)
+Type of Reptile Food_id(FK)
+Type of Dog Toys_id(FK)
+Dog Life Stage_id(FK)
+Dog Breed Type_id(FK)
+Dog_Health Benefit_id(FK)
+Type of Veterinary Diet_id(FK)
+Type of Feeders_id(FK)
+Cat Life Stage_id(FK)
+Food Feature_id(FK)
+Cat Breed_id(FK)
+Type of Cat Toys_id(FK)
+
+# Type of Cat Toys
+Balls & Chasers
+Plush Toys
+Scratchers
+Teasers
+
+
+
+# Cat Breed
+Persian
+British Shorthair
+Maine Coon
+Bengal
+
+# Health Benefit
+Active
+Dental
+Eyes
+Food allerges
+Hairballs
+Heart
+
+
+# Food Feature
+Natural
+Grain Free
+Limited Ingredients
+
+# Cat Life Stage
+Kitten (birth - 1year)
+Adult (1 year - 7 years)
+Mature Adult (7+ years)
+Senior (11+ years)
+Over 6 months
+
+# Type of Feeders
+Automatic
+Feeders
+Wateners
+
+
+# Type of Veterinary Diet
+Multifunction
+Calming support
+Diabetes support
+Digestive support
+Food Sensitivity
+
+# Health Benefit
+Active
+Dental
+Eyes
+Food allerges
+Hairballs
+Heart
+Hip&joint
+
+
+# Dog Breed Type
+Beagle
+Boxer
+Bulldog
+Chihuahua
+
+
+# Dog Life Stage
+Puppy
+Adult
+Senior
+Small & Mini
+All Ages
+
+# Type of Dog Toys
+Plush Toys
+Balls Toys
+Chew & Bones Toys
+Rope & Tug Toys
+
+# Type of Reptile Food
+LIZARD
+TURTLE
+FROG
+Insect
+Snake
+
+# Type of Bird Cage Accessories
+Litter & Nesting
+Perches & Toys
+
+
+# Type of Small Pet Food
+Rabbit
+Hamster
+Pig
+Sugar Glider
+
+
+
+# Type of Small Pet Habitat Accessories
+Toys
+Cages
+Habitats
+Feeding Supplies
+Playpens
+Beding & Litter
+Beds, Hideouts & toys
+Harnesses & Carriers
+
+
+# Wholesale / Industrial Goods / Raw Materials / Alloy Steel Rod Stock
+
+
+Generic Name
+
+
+
