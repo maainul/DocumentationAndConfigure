@@ -1,54 +1,48 @@
-# Docker 
+# Docker
 
 ## 1. Continers
 
-1. Run a container
-	
-		docker run hello_world : it will download a container and run if locally is not available
+1.  Run a container
 
-2. Show the status of docker 
-	
-		systemctl status docker
-	
-		systemctl start docker
+        docker run hello_world : it will download a container and run if locally is not available
 
-3. How to create a simple container from CMD:
-	
-		docker run -t -t --name "MY First Container" centos:latest /bin/bash
+2.  Show the status of docker
 
+        systemctl status docker
 
-	- i = iteractive mode
-	- t = terminal
+        systemctl start docker
 
-	bin/bash = cmd or server to run in the container to use
+3.  How to create a simple container from CMD:
 
-	show the host file : hostname -f, top
+        docker run -t -t --name "MY First Container" centos:latest /bin/bash
+
+    - i = iteractive mode
+    - t = terminal
+
+    bin/bash = cmd or server to run in the container to use
+
+    show the host file : hostname -f, top
 
 (Now we are inside the container terminal)
 
-	
-	docker container ls : list of all containers
-	
-	docker container ls -a : list of all running container
+    docker container ls : list of all containers
+
+    docker container ls -a : list of all running container
 
 ## 2. Images
 
-	docker image list
+    docker image list
 
-	docker pull ubuntu (hun.docker.com)
+    docker pull ubuntu (hun.docker.com)
 
 ## 3. Docker file
 
 Docker file is a simple text file contain list of instructions or steps to build new docker images.
 
-
 Create a folder inside directory
-	
-	mkdir dockerbuild
-	
-	cd dockerbuild
-	
-	vim Dockerbuild
+mkdir dockerbuild
+cd dockerbuild
+vim Dockerbuild
 
 ```bash
 FROM ubuntu:latest
@@ -60,40 +54,35 @@ RUN apt-get install -y openssh-server
 CMD["echo","Hello World........."]
 ```
 
-
-
 type : esc + wq !
 
 From this docker file we can build container
 
-	docker build -t myubuntu:1.0
-
+    docker build -t myubuntu:1.0
 
 Run Docker :
-	
-	docker run myubuntu:1.0
+docker run myubuntu:1.0
 
-See running containers : 
-	
-	docker continer ls
+See running containers :
+docker continer ls
 
 See all containers :
-	
-	docker container ls -a
+docker container ls -a
 
-## Remove Containers 
+## Remove Containers
 
-	docker container rm containerID
+    docker container rm containerID
 
 ## Create apache2 images and container
-	
-	mkdir apachedockerfolder
 
-	cd apachedockerfolder
-	
-	vim Dockerfile
+    mkdir apachedockerfolder
+
+    cd apachedockerfolder
+
+    vim Dockerfile
 
 ## Dockerfile.yaml
+
 ```
 # This is test file for dockerfile for apache2 container and images
 
@@ -121,17 +110,18 @@ EXPOSE 80
 
 
 ```
-	docker run -t -d -P --name apache2Container apache2ubuntu
 
-	-d = detachablemode
-	
-	-P = portmapping
+    docker run -t -d -P --name apache2Container apache2ubuntu
+
+    -d = detachablemode
+
+    -P = portmapping
 
 ## Docker Compose
 
 We may have multiple continers we have to manage multiple containers.
 
-Docker compose is a tools for defining and running multi-continer 
+Docker compose is a tools for defining and running multi-continer
 docker application.
 
 Use yaml file to configure applications
@@ -140,43 +130,42 @@ With single command we should be able to build and start containers
 
 Terminationg containers also easy by executing single containers
 
-	
-	docker compose
+    docker compose
 
-	docker-compose up -d
+    docker-compose up -d
 
-	docker-compose down
+    docker-compose down
 
 ## Create mysql and nginx
 
-	mkdir docker-compose
+    mkdir docker-compose
 
-	cd docker-compose
+    cd docker-compose
 
-	vim docker-compose.yaml
+    vim docker-compose.yaml
 
 ```
 version: '3'
 services:
         mysql_database:
                 image: "mysql:latest"
-                environment: 
+                environment:
                         - MYSQL_ROOT_PASSWORD="password"
-        
+
         web_test :
                 image : "nginx:latest"
 
 
 
 ```
+
 ### Create a container from compose
 
-	docker-compose up
+    docker-compose up
 
 ### for stop a container go to the docker compose directory and apply cmd
 
-	docker-compose down
-
+    docker-compose down
 
 # Docker
 
@@ -492,3 +481,113 @@ Update Dockerfile
     docker build .
 
 Now it is fixed.
+
+## COPY file to the container
+
+    COPY ./ ./
+
+```
+    # Specify a base image
+    FROM node:alpine
+
+    COPY ./ ./
+    # Install some dependencies
+    RUN npm install
+
+    # Default command
+    CMD ["npm","start"]
+```
+
+## Run cmd with tag
+
+    docker build -t maainul/simpleweb
+
+    docker run maainul/simpleweb
+
+    docker run -p 8080:8080 maainul/simpleweb
+
+### Let's test in the web browser
+
+    localhost:8080
+
+Not working .... PORT MAPPING
+
+## Port Mapping
+
+![portmapping](https://user-images.githubusercontent.com/85335954/130363208-c887de9d-22bc-467e-89f4-d48284a6fd8a.png)
+
+![portmapping-2](https://user-images.githubusercontent.com/85335954/130363238-79395163-0f90-4e7c-9345-4577bca45838.png)
+
+![portmapping-3](https://user-images.githubusercontent.com/85335954/130363244-bff85d06-989c-4e17-928d-100c07e2c9ca.png)
+
+Host port and docker container port can be different
+
+    Let's try
+
+    docker run -p 5000:8080 maainul/simpleweb
+
+    localhost:5000
+
+## Question : Can I change the port of container ?
+
+Yes.
+
+    docker run -p 5000:6000 maainul/simpleweb
+
+But wait a minute change port number from the project
+
+Before :
+
+```node
+app.listen(8080, () => {
+  console.log("Listen on port 8080");
+});
+```
+
+After :
+
+```node
+app.listen(6000, () => {
+  console.log("Listen on port 8080");
+});
+```
+
+## Update the dockrfile
+
+Update the dockerfile because all file is in the root directory of container
+
+![-itflag](https://user-images.githubusercontent.com/85335954/130363414-c8c11d27-a4bf-467e-9d2a-4c24fbcbaef6.png)
+
+It can be conflict so let's update docker file...
+
+# Where project will be saved
+
+WORKDIR /usr/app
+
+## Full Dockerfile
+
+```
+# Specify a base image
+FROM node:alpine
+
+# Where project will be saved
+WORKDIR /usr/app
+
+COPY ./ ./
+# Install some dependencies
+RUN npm install
+
+# Default command
+CMD ["npm","start"]
+```
+
+    docker build -t maainul/simpleweb .
+
+    docker run -p 8080:8080 maainul/simpleweb
+
+    docker ps
+
+    docker exec -it idofcaontainer sh
+
+    ls
+    cd /
