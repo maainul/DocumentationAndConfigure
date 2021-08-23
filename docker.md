@@ -591,3 +591,144 @@ CMD ["npm","start"]
 
     ls
     cd /
+
+## --------------------------------------------- NEW APP ------------------------------------------------------------
+
+## Our App may look like this.
+
+![nodeappr1](https://user-images.githubusercontent.com/85335954/130395082-ef498e96-3519-4cea-9a4e-b4e7b376b109.png)
+
+### There will be a container with node app and connected with redis
+
+![ndoeredis2](https://user-images.githubusercontent.com/85335954/130395058-e604adc4-888e-4d85-9216-ea450fd89e0e.png)
+
+### We can think about this
+
+![noderedis3](https://user-images.githubusercontent.com/85335954/130394978-9c6d46d3-106a-4f76-9d02-e356e084961f.png)
+
+### But this will be better
+
+![nodereids-4](https://user-images.githubusercontent.com/85335954/130394984-4bff02af-bdea-4b77-be27-026df9a34df3.png)
+
+### One App container and one redis container and communicate with other
+
+![noderedis-5](https://user-images.githubusercontent.com/85335954/130394981-c124448d-5684-4aa1-9e13-77b938d027a9.png)
+
+## Connect with Multiple Containers : Node app and REDIS
+
+1. Create index.js
+
+```
+const express = require("express");
+const redis = require("redis");
+
+const app = express();
+
+const client = redis.createClient({
+  host: "redis-server", // same as container name in the docker-compose.yaml file
+  port: 6379, // redis default port
+});
+
+client.set("visits", 0);
+
+app.get("/", (req, res) => {
+  client.get("visits", (err, visits) => {
+    res.send("Number of visits is " + visits);
+    client.set("visits", parseInt(visits) +1);
+  });
+});
+
+app.listen(4001, () => {
+  console.log("Listen on port 4001.......");
+});
+
+```
+
+2. Create package.json
+
+```json
+{
+  "dependencies": {
+    "express": "*",
+    "redis": "2.8.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
+```
+
+3. Dockerfile
+
+```Dockerfile
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm","start"]
+
+```
+
+4. docker-compose.yml
+
+```yml
+version: "3"
+services:
+  redis-server:
+    image: "redis"
+  node-app:
+    build: .
+    ports: - "40001:8081"
+```
+
+    docker-compose up
+
+    docker run -d redis
+
+    dokcer-compose up -d
+
+    docker ps
+
+    docker-compose up --build
+
+## Connection between two container
+
+![ndr-3](https://user-images.githubusercontent.com/85335954/130423998-4beebef8-091a-4fb7-af8d-95896ecf3a2b.png)
+
+## What is docker compose ??
+
+![ndr-4](https://user-images.githubusercontent.com/85335954/130424005-b311a0b3-5969-485a-ae13-77ee6da0ef55.png)
+
+## Project compose file overview
+
+![ndr-6](https://user-images.githubusercontent.com/85335954/130424021-4d5c9f7f-43bd-4721-a45c-810f0decc64c.png)
+
+![ndr-5](https://user-images.githubusercontent.com/85335954/130424009-d2163671-c95d-49a4-9686-c71cfa17dc50.png)
+
+## Docker up
+
+![rd-7](https://user-images.githubusercontent.com/85335954/130424031-4640e6dd-f20b-4b0f-bda6-91ea87f81eff.png)
+
+## All files together
+
+![all](https://user-images.githubusercontent.com/85335954/130425668-c50d1265-bc86-4df4-bc45-f460d828d4d9.png)
+
+## Now Build project
+
+    1. Run redis first
+
+## Docker up and down
+
+![ndr-7](https://user-images.githubusercontent.com/85335954/130424023-07f4a1c4-94a8-408d-b6e2-9cddeff620e2.png)
+
+    docker compose up
+
+    docker compose up --build
+
+    http://localhost:8081/
