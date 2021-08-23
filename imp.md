@@ -1,13 +1,24 @@
-docker-compose up --build -d
-docker logs -f netbank_cms
-docker-compose build netbank-cms
-docker restart netbank_cms
-docker-compose up -d
+## Docker For Netbank
+
+	docker-compose up --build -d
+
+	docker logs -f netbank_cms
+
+	docker-compose build netbank-cms
+
+	docker restart netbank_cms
+
+	docker-compose up -d
 
 
-sudo service postgresql status
-sudo service postgresql stop
-sudo service postgresql status
+## How to stop postgres
+
+	sudo service postgresql status
+
+	sudo service postgresql stop
+
+	sudo service postgresql status
+
   
 
 11. If any Changes happend then run these cmd for docker
@@ -21,15 +32,19 @@ git pull upstream master
 
 git checkout -b NV-123-Test
 
+## Update Commit message
 
 
-git add .
-git commit --amend
-git push origin NV-165-create-hubspot-on-profile --force
+	git add .
+	
+	git commit --amend
+	
+	git push origin NV-165-create-hubspot-on-profile --force
 
 
-DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test
-DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test -c
+	DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test
+
+	DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test -c
 
 
 GUNK-----> gunk/Profile ---->Gunk Service 
