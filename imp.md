@@ -32,6 +32,24 @@ git pull upstream master
 
 git checkout -b NV-123-Test
 
+# Push
+
+	git status
+	
+	git add .
+	
+	git commit 
+	
+	git checkout origin master --->( go to the master branch and pull)
+	
+	git pull upstream master
+	
+	git checkout branch_name
+	
+	git rebase master
+	
+	git push branch-name -f
+
 ## Update Commit message
 
 
