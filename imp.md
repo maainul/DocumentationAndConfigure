@@ -63,6 +63,7 @@ git checkout -b NV-123-Test
 	DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test
 
 	DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test -c
+	
 
 ## Netbank Work Flow
 
@@ -109,8 +110,6 @@ Business logic -----------------> in the core folder
 	git push origin NV-39-signup
 
 
-
-
 # Push Second time
 
 	git status
@@ -130,28 +129,27 @@ Business logic -----------------> in the core folder
 
 
 
-
-# grpc add
-
-
-go get -u google.golang.org/grpc
+## grpc add
 
 
+	go get -u google.golang.org/grpc
 
-go get -u github.com/golang/progobuf/protoc-gen-go
+## Add protoc
+
+	go get -u github.com/golang/progobuf/protoc-gen-go
 
 
 
 ## Docker install and run postgres:12-alpine
 
-docekr pull postgres:12-alpine
+	docekr pull postgres:12-alpine
 
-docker images
+	docker images
 
-docker image ps
+	docker image ps
 
-docker run --name postgres_for_book -p 5430:5430 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:12-alpine
+	docker run --name postgres_for_book -p 5430:5430 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:12-alpine
 
-docker container ps -a
+	docker container ps -a
 
-docker exec -it postgres_for_book psql -U root
+	docker exec -it postgres_for_book psql -U root
