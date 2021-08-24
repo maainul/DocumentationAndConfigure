@@ -732,3 +732,56 @@ services:
     docker compose up --build
 
     http://localhost:8081/
+
+## DOCKERIZE REACT APP
+
+### Project and docker work flow of Industry
+
+![workflow](https://user-images.githubusercontent.com/85335954/130448462-4533cdc3-06ab-45bf-b4bc-dfb040c3d941.png)
+
+### React app
+
+    mkdir react-app-with-docker
+
+    cd react-app-with-docker
+
+    sudo npm install -g create-react-app
+
+    create-react-app frontend
+
+    cd frontend
+
+    yarn start
+
+### Run in the localhost
+
+    http://127.0.0.1:3000/
+
+### Add Dockerfile.dev in the pwd
+
+```Dockerfile
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm","run","start"]
+
+```
+
+    docker build -f Dockerfile.dev .
+
+    docker run containerID
+
+    docker run -p 3000:3000 containerID
+
+## DOCKER VOLUME
+
+docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app containerID
+
+![volume-create](https://user-images.githubusercontent.com/85335954/130448727-a4cde89d-4ff5-4fa9-bc4e-e03673325df3.png)
