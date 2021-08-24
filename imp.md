@@ -64,17 +64,19 @@ git checkout -b NV-123-Test
 
 	DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test -c
 
+## Netbank Work Flow
 
-GUNK-----> gunk/Profile ---->Gunk Service 
+	GUNK-----> gunk/Profile ---->Gunk Service 
 
-This Service is implemented in Profile/services/profile/ folder
+	This Service is implemented in Profile/services/profile/ folder
 
-This Service database Related stuff in profile/core/profile/company.profile
+	This Service database Related stuff in profile/core/profile/company.profile
 
-This method will call profile/storage/postgres/companyprofile.go
+	This method will call profile/storage/postgres/companyprofile.go
 
-(Interface)-------> (service)---------------------> (Repository)--------------> (database)
-gunk/profile ---- > profile/services/profile -----> profile/core/profile -----> storage/postgres
+	(Interface)-------> (service)---------------------> (Repository)--------------> (database)
+	
+	gunk/profile ---- > profile/services/profile -----> profile/core/profile -----> storage/postgres
 
 
 
@@ -84,40 +86,47 @@ add file to the handler folder
 
 
 
-
-
-
-
-Business logic in the core folder
+Business logic -----------------> in the core folder
 
 # How to push Data
 
-git status
-git commit 
-git log
-git checkout master
-git pull upstream master
-git checkout NV-39-signup
-git rebase master
-git status
-git push origin NV-39-signup
+	git status
+	
+	git commit 
+	
+	git log
+	
+	git checkout master
+	
+	git pull upstream master
+	
+	git checkout NV-39-signup
+	
+	git rebase master
+	
+	git status
+
+	git push origin NV-39-signup
+
 
 
 
 # Push Second time
 
-git status
-git add .
-git commit --amend 
+	git status
+	
+	git add .
+	
+	git commit --amend 
 
-ctrl + O + Enter + ctrl + x
+	ctrl + O + Enter + ctrl + x
 
-git push origin NV-ticket name --force
+	git push origin NV-ticket name --force
 
 
 # Staging push
 
-git push upstream your-branch:staging-test -f
+	git push upstream your-branch:staging-test -f
 
 
 
