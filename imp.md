@@ -11,6 +11,12 @@
 	docker-compose up -d
 
 
+## Clone a project
+	
+	git clone 
+
+	git remote add upsteam git@git.brankas.dev:netbank/netbank.git
+
 ## How to stop postgres
 
 	sudo service postgresql status
