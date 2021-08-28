@@ -11,6 +11,12 @@
 	docker-compose up -d
 
 
+## Clone a project
+	
+	git clone 
+
+	git remote add upsteam git@git.brankas.dev:netbank/netbank.git
+
 ## How to stop postgres
 
 	sudo service postgresql status
@@ -63,6 +69,25 @@ git checkout -b NV-123-Test
 	DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test
 
 	DATABASE_CONNECTION="user=postgres password=secret host=localhost port=5435 dbname=test sslmode=disable" go test -c
+	
+
+## Merge Conflict
+	
+	git checkout master
+	
+	git pull upstream master
+	
+	git checkout NV-360-somenthig-branch-name
+	
+	git rebase master
+	
+	git add .
+	
+	git rebase --continue
+	
+	git commit 
+	
+	git push origin NV-something-name -f
 	
 
 ## Netbank Work Flow

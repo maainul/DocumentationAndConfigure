@@ -785,3 +785,59 @@ CMD ["npm","run","start"]
 docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app containerID
 
 ![volume-create](https://user-images.githubusercontent.com/85335954/130448727-a4cde89d-4ff5-4fa9-bc4e-e03673325df3.png)
+
+## Docker with test
+
+## Update docker-compose.yml
+
+```yml
+version: "3"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3004:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]
+```
+
+## Run command
+
+    docker-compose up --build
+
+## It will throw an error
+
+    Because we are not volume clearly.. so discard volumes
+
+```yml
+version: "3"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3004:3000"
+    # volumes:
+    #   - /app/node_modules
+    #   - .:/app
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    # volumes:
+    #   - /app/node_modules
+    #   - .:/app
+    command: ["npm", "run", "test"]
+```
