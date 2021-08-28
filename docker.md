@@ -1,5 +1,34 @@
 # Docker
 
+# Go lang app: https://github.com/mainul-codemen/Go-Rest-Api-Postgres-Booklist-Project
+
+### Dockerfile
+
+```dockerfile
+FROM golang:1.16
+
+LABEL Maintainer="Mainul Hasan <mainul080@gmail.com>"
+
+WORKDIR /go/src/Go-Rest-Api-Postgres-Booklist-Project
+
+COPY . .
+
+RUN go get -d -v ./...
+RUN go install -v ./...
+
+# RUN go build -o Go-Rest-Api-Postgres-Booklist-Project .
+
+CMD ["Go-Rest-Api-Postgres-Booklist-Project"]
+```
+docker build -t maainul/web-api
+
+docker run maainul/web-api
+
+docker run -p 8000:8000 maainul/web-api
+
+
+
+
 ## 1. Continers
 
 1.  Run a container
