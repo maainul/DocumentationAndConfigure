@@ -1,3 +1,6 @@
+## sort ascending vs code ---> ctrl + p ---> sort ascending
+
+
 ## Docker For Netbank
 
 	docker-compose up --build -d
@@ -10,6 +13,25 @@
 
 	docker-compose up -d
 
+
+# Stash work:
+	
+	git add .
+
+	git stash push
+	
+	git pull upstream master
+	
+	git checkout NV-somename
+	
+	git stash pop
+	
+	git add .
+	
+	git commit 
+	
+	git push origin NV-somebranchname
+	
 
 ## Clone a project
 	
@@ -33,10 +55,9 @@
 
 	sudo docker-compose up -d
 	
-	
-git pull upstream master
+	git pull upstream master
 
-git checkout -b NV-123-Test
+	git checkout -b NV-123-Test
 
 # Push
 
