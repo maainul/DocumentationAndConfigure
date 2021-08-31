@@ -1,5 +1,45 @@
 # Docker
 
+### Dockerize simple application:
+
+
+https://tutorialedge.net/golang/go-docker-tutorial/
+
+
+
+
+
+
+
+# Go lang app: https://github.com/mainul-codemen/Go-Rest-Api-Postgres-Booklist-Project
+
+### Dockerfile
+
+```dockerfile
+FROM golang:1.16
+
+LABEL Maintainer="Mainul Hasan <mainul080@gmail.com>"
+
+WORKDIR /go/src/Go-Rest-Api-Postgres-Booklist-Project
+
+COPY . .
+
+RUN go get -d -v ./...
+RUN go install -v ./...
+
+# RUN go build -o Go-Rest-Api-Postgres-Booklist-Project .
+
+CMD ["Go-Rest-Api-Postgres-Booklist-Project"]
+```
+docker build -t maainul/web-api
+
+docker run maainul/web-api
+
+docker run -p 8000:8000 maainul/web-api
+
+
+
+
 ## 1. Continers
 
 1.  Run a container
@@ -841,3 +881,48 @@ services:
     #   - .:/app
     command: ["npm", "run", "test"]
 ```
+
+## Nginx and react
+
+1. Servers
+   ![dev1](https://user-images.githubusercontent.com/85335954/130668804-8d234327-866c-491f-93d5-fa97c9ffaabf.png)
+
+2. Prod servers
+   ![dev3](https://user-images.githubusercontent.com/85335954/130668812-93a7fd38-93b1-452c-ae7d-1fe7509912ec.png)
+
+3. Docker flow
+   ![dev4](https://user-images.githubusercontent.com/85335954/130668814-2a80424c-2fdb-43e4-82be-505542bc6137.png)
+
+```dockerfile
+FROM node:alpine as builder
+
+WORKDIR '/app'
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm","start"]
+
+
+FROM nginx
+
+COPY --from=builder /app/build /usr/share/nginx/html
+
+
+
+```
+
+in the app directory file should be ---> app/build
+
+No other file will be added.
+
+### RUN cmd
+
+    docker build .
+
+    docker run -p 8080:80(80 - default port of nginx)
+
+    localhost:8080
