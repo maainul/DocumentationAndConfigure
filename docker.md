@@ -841,3 +841,48 @@ services:
     #   - .:/app
     command: ["npm", "run", "test"]
 ```
+
+## Nginx and react
+
+1. Servers
+   ![dev1](https://user-images.githubusercontent.com/85335954/130668804-8d234327-866c-491f-93d5-fa97c9ffaabf.png)
+
+2. Prod servers
+   ![dev3](https://user-images.githubusercontent.com/85335954/130668812-93a7fd38-93b1-452c-ae7d-1fe7509912ec.png)
+
+3. Docker flow
+   ![dev4](https://user-images.githubusercontent.com/85335954/130668814-2a80424c-2fdb-43e4-82be-505542bc6137.png)
+
+```dockerfile
+FROM node:alpine as builder
+
+WORKDIR '/app'
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm","start"]
+
+
+FROM nginx
+
+COPY --from=builder /app/build /usr/share/nginx/html
+
+
+
+```
+
+in the app directory file should be ---> app/build
+
+No other file will be added.
+
+### RUN cmd
+
+    docker build .
+
+    docker run -p 8080:80(80 - default port of nginx)
+
+    localhost:8080
