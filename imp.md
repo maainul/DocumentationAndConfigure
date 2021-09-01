@@ -12,6 +12,10 @@
 	docker restart netbank_cms
 
 	docker-compose up -d
+	
+## 3 in one
+
+	docker-compose build netbank-cms && docker restart netbank_cms && docker-compose up -d
 
 
 # Stash work:
