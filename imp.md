@@ -17,6 +17,15 @@
 
 	docker-compose build netbank-cms && docker restart netbank_cms && docker-compose up -d
 
+## Docker Restarting resolve netbank_cms
+
+	docker-compose down -v
+	
+	docker-compose up --build -d --remove-orphans
+	
+	docker ps
+
+	
 
 # Stash work:
 	
