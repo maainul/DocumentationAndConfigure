@@ -25,6 +25,46 @@
 	
 	docker ps
 
+ 5312  git status
+ 
+ 5313  git add .
+ 
+ 5314  git commit -am "Html slice"
+ 
+ 5315  git checkout master
+ 
+ 5316  git pull upsteam master
+ 
+ 5317  git pull upstream master
+ 
+ 5318  go mod vendor
+ 
+ 5319  cd go/src/brank.as/netbank
+ 
+ 5320  code .
+ 
+ 5321  git status
+ 
+ 5322  git checkout NV-352-connect-endpoint-to-frontend-html-slice
+ 
+ 5323  git status
+ 
+ 5324  code .
+ 
+ 5325  go mod vendor
+ 
+ 5326  code .
+ 
+ 5327  git rebase master
+ 
+ 5328  git add .
+ 
+ 5329  git rebase --continue
+ 
+ 5330  git status
+ 
+ 5331  go mod vendor
+
 	
 
 # Stash work:
