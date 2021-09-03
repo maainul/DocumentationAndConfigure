@@ -1,5 +1,9 @@
 ## sort ascending vs code ---> ctrl + p ---> sort ascending
 
+## FOrmate code 
+
+	git ls-files '*.go' | xargs gofumpt -d -s
+
 
 ## Docker For Netbank
 
