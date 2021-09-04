@@ -1,4 +1,6 @@
 ## sort ascending vs code ---> ctrl + p ---> sort ascending
+## terminal ---> ctrl + j
+
 
 ## FOrmate code 
 
