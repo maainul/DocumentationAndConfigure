@@ -305,7 +305,7 @@ A container :
 
 	create-react-app react-app
 
-	cd frontend
+	cd react-app
 
 	yarn start
 
