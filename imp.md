@@ -74,6 +74,23 @@
  
  5331  go mod vendor
 
+
+## Git Reset
+
+	git log --oneline
+
+	git reset --soft<commit-sha>
+
+	git log
+	
+	git add .
+	
+	git commit -am "commit"
+	
+	git push
+	
+	
+	
 	
 
 # Stash work:

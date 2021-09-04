@@ -1,64 +1,79 @@
 1. What is docekr ?
 
 BUILD, RUN, SHIP applications
-	
 Docekr is a platform/tools for building, running and shipping applications with a consistent manner.
-That works development mechine and test and production mechine also. 
-Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. 
+That works development mechine and test and production mechine also.
+Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
 
 Reasons :
 
-	1. One or more files missing
-	
-	2. Software version mismatch
-	
-	3. Different configurations
-	
+    1. One or more files missing
+
+    2. Software version mismatch
+
+    3. Different configurations
+
 2. What is container?
 
 An isolated environment for running an application.
 
 Benefits :
 
-	1. Allow multiple apps in isolation
+    1. Allow multiple apps in isolation
 
-	2. Are lightweight
+    2. Are lightweight
 
-	3. Use OS of the host
-	
+    3. Use OS of the host
+
 3. What is virtual machine?
 
 An abstraction of a machine(Physical hardware)
 
 Hypervisor is software to use to create or manage virtual machine.
 
-Hypervisor:
-	
-	1. Vmware
-	
-	2. VirtualBox
-	
-	3. Hyper -V (only for windows)
+Hypervisor: 1. Vmware 2. VirtualBox 3. Hyper -V (only for windows)
 
 By using hypervisor we can create multiple os
 
-PROBLEMS:
-	
-	1. Each needs a full-blown os
-	
-	2. Slow to start
-	
-	3. Resource intensive
-	
+PROBLEMS: 1. Each needs a full-blown os 2. Slow to start 3. Resource intensive
+
+# isntall go and Docker
+
+    docker run ubuntu
+
+    docker ps
+
+    docker ps -a
+
+    docker run -it ubuntu
+
+    apt install
+
+    apt update
+
+    mkdir code
+
+    cd code
+
+    apt install nano
+
+    apt-get install golang
+
+    go run hello.go
+
+    docker start contaierid
+
+    docker exec -it f6022e9a0eff sh
+
 # Docker in Action
 
 create directory and create file app.js
 
-	mkdir smallapp
+    mkdir smallapp
 
-	cd smallapp
+    cd smallapp
 
-	touch app.js
+    touch app.js
 
 ```js
 console.log("Hello Docker!");
@@ -68,315 +83,312 @@ console.log("Hello Docker!");
 
 ```Dockerfile
 # alpine = small version of linux to run node
-FROM node:alpine  
+FROM node:alpine
 
 # copy all files to the app directory ,if app directory is not avaiblabe then docker will create it
-COPY . /app 
+COPY . /app
 
 # assing all the acction will be perfomed in app directory
-WORKDIR /app 
+WORKDIR /app
 
 # general command
 CMD node app.js
 
 ```
 
-	docker build -t hello-docker .
+    docker build -t hello-docker .
 
-	docker run hello-docker
-
+    docker run hello-docker
 
 ## Linux Ubuntu
 
-1. Pull images from hub
+1.  Pull images from hub
 
-	docker run ubuntu
+    docker run ubuntu
 
-2. Start container intractive mode
-	
-		docekr run -it ubuntu
+2.  Start container intractive mode
 
-		root@2f759e6996e9:/#
+        docekr run -it ubuntu
 
-		root ---> user
+        root@2f759e6996e9:/#
 
-		2f759e6996e9 ---> container name
+        root ---> user
 
-		/ --->  root directory
+        2f759e6996e9 ---> container name
 
-		# ---> root user
+        / --->  root directory
 
-		$ ---> normal user
+        # ---> root user
 
-		echo hello
+        $ ---> normal user
 
-		whoami
+        echo hello
 
-		echo $0 ---> location of the shell program
+        whoami
 
-		/bin/bash  ---> 
+        echo $0 ---> location of the shell program
 
-		bin --> folder/dirctory
+        /bin/bash  --->
 
-		bin --> born in shell
+        bin --> folder/dirctory
 
-		bash--> born again shell.. program
-	
-3. Install apt in linux container
+        bin --> born in shell
 
-		apt list
+        bash--> born again shell.. program
 
-		apt update 
+3.  Install apt in linux container
 
-		apt install nano
+        apt list
 
-		nano
+        apt update
 
-		ctrl + x + n 
+        apt install nano
 
-		apt remove nano
+        nano
 
-		ls
+        ctrl + x + n
 
-		ls -1
+        apt remove nano
 
-		ls-la
+        ls
 
-		cd ~
+        ls -1
 
-		pwd
+        ls-la
 
-4. Create directory and files In the linux.
-	
-		mkdir test
+        cd ~
 
-		mkdir -p a/b/c/d/ ---> create multiple folder
+        pwd
 
+4.  Create directory and files In the linux.
 
-		mv test docker ---> rename   mv test(old folder name) docker(new folder name)
+        mkdir test
 
-		touch hello.txt
+        mkdir -p a/b/c/d/ ---> create multiple folder
 
-		touch hello1.txt hello2.txt
 
-		mv hello.txt hello-docker.txt ---> rename
+        mv test docker ---> rename   mv test(old folder name) docker(new folder name)
 
-		rm file*  ---> remove files name strarts with file....
+        touch hello.txt
 
-		rm -r docker/ --> remove directory // r ----> recursive
+        touch hello1.txt hello2.txt
 
-		nano file1.txt (save files ctrl +x +Yes)
+        mv hello.txt hello-docker.txt ---> rename
 
-		cat file.txt  ---------> read data from the file.txt
+        rm file*  ---> remove files name strarts with file....
 
-		less 
+        rm -r docker/ --> remove directory // r ----> recursive
 
-		apt install less
+        nano file1.txt (save files ctrl +x +Yes)
 
-		head -n 5 /etc/adduser.conf
+        cat file.txt  ---------> read data from the file.txt
 
-		tail -n /etc/adduser.conf
+        less
 
-5. Read and write files
+        apt install less
 
-		cat file1.txt > file2.txt  ---> read file1 and write data file2
+        head -n 5 /etc/adduser.conf
 
-		cat file1.txt file2.txt --> read multiple files
+        tail -n /etc/adduser.conf
 
-		cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
+5.  Read and write files
 
-		echo hello file1.txt
+        cat file1.txt > file2.txt  ---> read file1 and write data file2
 
-		ls -l /etc > files.txt
+        cat file1.txt file2.txt --> read multiple files
 
-		cat files.txt
+        cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
 
-6. Search files and folders
+        echo hello file1.txt
 
-		grep hello file1.txt  --> hello hello from file1.txt
+        ls -l /etc > files.txt
 
-		grep -i hello file1.txt --->case insencetive
+        cat files.txt
 
-		grep -i hello file*  ---> search in multiple files
+6.  Search files and folders
 
-		grep -i -r hello .
+        grep hello file1.txt  --> hello hello from file1.txt
 
-		grep -ir hello .
+        grep -i hello file1.txt --->case insencetive
 
-		find   ----> find directory and files
+        grep -i hello file*  ---> search in multiple files
 
-		ls -a ---> show hidden files
+        grep -i -r hello .
 
-		find -type d
+        grep -ir hello .
 
-		find -type f
+        find   ----> find directory and files
 
-		find -type f -name "F*"
+        ls -a ---> show hidden files
 
-		find -type f -iname "f*" --> case sensetive
+        find -type d
 
-		find / -type -name "*.py"
+        find -type f
 
-		find / -type f -name "*.py" > python-files.txt
+        find -type f -name "F*"
 
-		cat python-files.txt
-	
-7. Multiple cmd
-	
-		mkdir test;cd test;echo done --> that will take to the test folder
+        find -type f -iname "f*" --> case sensetive
 
-		mkdir test && cd test && echo done ---> and operator --> if one cmd fails then other cmd won't be executed
+        find / -type -name "*.py"
 
-		mkdir test || echo "Directory exits" --> and operator ---> create directory if not print message
+        find / -type f -name "*.py" > python-files.txt
 
-		ls /bin | less
+        cat python-files.txt
 
-		ls /bin | head -n 5
+7.  Multiple cmd
 
-		mkdir hello;\
-		> cd hello;\
-		> echo done
+        mkdir test;cd test;echo done --> that will take to the test folder
 
-8. Env variables
+        mkdir test && cd test && echo done ---> and operator --> if one cmd fails then other cmd won't be executed
 
-9. Managing Process
+        mkdir test || echo "Directory exits" --> and operator ---> create directory if not print message
 
-		sleep 3 
+        ls /bin | less
 
-		kill processid
+        ls /bin | head -n 5
 
-		kill 38(processid)
+        mkdir hello;\
+        > cd hello;\
+        > echo done
+
+8.  Env variables
+
+9.  Managing Process
+
+        sleep 3
+
+        kill processid
+
+        kill 38(processid)
 
 10. Managing User
 
-		useradd -m john
+        useradd -m john
 
-		cat /etc/passwd
+        cat /etc/passwd
 
-		cat /etc/shadow
+        cat /etc/shadow
 
-		usermod -s /bin/bash john
+        usermod -s /bin/bash john
 
-		docker exec -it -u john 2f78 
+        docker exec -it -u john 2f78
 
-		add user
+        add user
 
-		groupadd developers
+        groupadd developers
 
-		cat /etc/group
+        cat /etc/group
 
-		usermod -G developers john
+        usermod -G developers john
 
-		grep /etc/passwd
+        grep /etc/passwd
 
-		groupadd artists
+        groupadd artists
 
-		cat /etc/passwrd | grep john
+        cat /etc/passwrd | grep john
 
-		grep john /etc/passwd
+        grep john /etc/passwd
 
-		groups john
+        groups john
 
-		cat /etc/passwd
+        cat /etc/passwd
 
-		usermod -G artists john
-	
+        usermod -G artists john
+
 11. File Permissions:
-	
-		cd home
 
-		echo echo hello > deploy.sh
+        cd home
 
-		echo deploy.sh
+        echo echo hello > deploy.sh
 
-		ls -l
+        echo deploy.sh
 
-		./delploy.sh
+        ls -l
 
-		chmod u+x deploy.sh 
+        ./delploy.sh
 
-		chmod o+x deploy.sh
+        chmod u+x deploy.sh
 
-		./deploy.sh
+        chmod o+x deploy.sh
 
-		chmod og+x+w-r *.sh
-	
+        ./deploy.sh
+
+        chmod og+x+w-r *.sh
+
 # Docker images
 
 A image contains:
 
-	1. A cut-down os
-	
-	2. Third-part libraries
-	
-	3. Application files
-	
-	4. Env variables
-		
+    1. A cut-down os
+
+    2. Third-part libraries
+
+    3. Application files
+
+    4. Env variables
+
 A container :
 
-	1. Provides an isolated environment
-	
-	2. Can be stopped and restarted
-	
-	3. Is Just a process
-	
+    1. Provides an isolated environment
+
+    2. Can be stopped and restarted
+
+    3. Is Just a process
+
 ## Simple react app
 
-	sudo npm install -g create-react-app
+    sudo npm install -g create-react-app
 
-	create-react-app react-app
+    create-react-app react-app
 
-	cd react-app
+    cd react-app
 
-	yarn start
-
+    yarn start
 
 1. install node
 2. npm install (install dependencies)
 3. npm start
 
 ## Docekr files:
-	contains instructions for building and image.
-	FROM : Base image
-	WORKDIR
-	CORY
-	ADD
-	RUN
-	ENV
-	EXPOSE
-	USER
-	CMD
-	ENTRYPOINT
-	
+
+    contains instructions for building and image.
+    FROM : Base image
+    WORKDIR
+    CORY
+    ADD
+    RUN
+    ENV
+    EXPOSE
+    USER
+    CMD
+    ENTRYPOINT
 
 ```Dockerfile
 
 FROM node:14.16.0-alpine3.13
 ```
 
-	docker build -t react-app .
+    docker build -t react-app .
 
-	docker image ls
+    docker image ls
 
-	docker run -it react-app
-	
-	docker run -it react-app bash
-	
-	docker run -it react-app sh
-	
-	ls
-	
-	node --version
-	
+    docker run -it react-app
+
+    docker run -it react-app bash
+
+    docker run -it react-app sh
+
+    ls
+
+    node --version
 
 ```Dockerfile
 
 FROM node:14.16.0-alpine3.13
 WORKDIR /app
-COPY . . 
-```	
-	
+COPY . .
+```
+
 create .dockerignore file in the cwd
 
 node_modules
@@ -385,25 +397,26 @@ node_modules
 
 FROM node:14.16.0-alpine3.13
 WORKDIR /app
-COPY . . 
+COPY . .
 RUN npm install
-```	
-
-	docker build -t  react-app .
-	
-	docker run -it react-app sh
 ```
-	
+
+    docker build -t  react-app .
+
+    docker run -it react-app sh
+
+````
+
 ### Docker file with Expose
-	
+
 ```Dockerfile
 
 FROM node:14.16.0-alpine3.13
 WORKDIR /app
-COPY . . 
+COPY . .
 EXPOSE 3000
 
-```
+````
 
 ### Docker file with user
 
@@ -411,30 +424,30 @@ EXPOSE 3000
 
 FROM node:14.16.0-alpine3.13
 WORKDIR /app
-COPY . . 
+COPY . .
 EXPOSE 3000
 RUN npm install
 RUN addgroup app && adduser -S -G app app
 USER app
 
 ```
-	docker run -it alpine
 
-	useradd --> not present
+    docker run -it alpine
 
-	adduser --> present
+    useradd --> not present
 
-	addgroup app
+    adduser --> present
 
-	adduser -S -G app app
+    addgroup app
 
-	groups app
+    adduser -S -G app app
 
-	addgroup mainul && adduser -S -G mainul mainul
+    groups app
 
-	groups mainul
+    addgroup mainul && adduser -S -G mainul mainul
 
-	
+    groups mainul
+
 ### Docker file with user
 
 ```Dockerfile
@@ -443,7 +456,7 @@ FROM node:14.16.0-alpine3.13
 RUN addgroup app && adduser -S -G app app
 USER app
 WORKDIR /app
-COPY . . 
+COPY . .
 RUN npm install
 EXPOSE 3000
 ```
@@ -457,7 +470,7 @@ FROM node:14.16.0-alpine3.13
 RUN addgroup app && adduser -S -G app app
 USER app
 WORKDIR /app
-COPY . . 
+COPY . .
 RUN npm install
 EXPOSE 3000
 # Shell form
@@ -466,11 +479,10 @@ EXPOSE 3000
 CMD ["npm", "start"] ----> we can override command
 # ENTRYPOINT ["npm", "start"] ---> we can't give cmd outside
 ```
-	docker run react-app
 
-	docker history react-app
+    docker run react-app
 
-
+    docker history react-app
 
 ### Docker file with optimized build
 
@@ -479,7 +491,7 @@ FROM node:14.16.0-alpine3.13
 RUN addgroup app && adduser -S -G app app
 USER app
 WORKDIR /app
-COPY package*.json . 
+COPY package*.json .
 COPY . .
 RUN npm install
 EXPOSE 3000
@@ -487,169 +499,165 @@ ENV API_URL = http://api.myapp.com/
 CMD ["npm", "start"]
 ```
 
-	docker build -t react-app .
+    docker build -t react-app .
 
 ## Removing images
 
-	docker image prune
+    docker image prune
 
-	docker container prune
+    docker container prune
 
-	docker rmi imageId ---> remove image
+    docker rmi imageId ---> remove image
 
 ## Tag
 
-	docker build -t react-app:1 build .
+    docker build -t react-app:1 build .
 
-	docker image remove react-app:1
+    docker image remove react-app:1
 
-	docker image tag react-app:latest react-app:1
+    docker image tag react-app:latest react-app:1
 
-	docker images
+    docker images
 
-	docker build -t react-app:2 .
+    docker build -t react-app:2 .
 
-	docker image tag bo6 maainul/react-app:1 
+    docker image tag bo6 maainul/react-app:1
 
-	docker push maainul/react-app:1	
-	
-	
+    docker push maainul/react-app:1
+
 ## Image Save and Load
-	
-	docker image save -o react-app.tar maainul/react-app:1
-	
-	docker image load -i react-app.tar
-	
-	docker images
-	
+
+    docker image save -o react-app.tar maainul/react-app:1
+
+    docker image load -i react-app.tar
+
+    docker images
+
 ## Docker Containers
 
-	docker ps (process)
-	
-	docker run react-app
-	
-	docker run -d react-app (-d == run in the background)
-	
-	docker run -d --name blue-sky react-app
+    docker ps (process)
+
+    docker run react-app
+
+    docker run -d react-app (-d == run in the background)
+
+    docker run -d --name blue-sky react-app
+
 ### Docker logs
 
-	docker logs containerid
-	
-	docker logs --help
-	
-	docker logs -f containerid (-f saw realtime data)
-	
-	docker logs -n 5 containerid
-	
-	docker logs -n 5 -t containerid
+    docker logs containerid
+
+    docker logs --help
+
+    docker logs -f containerid (-f saw realtime data)
+
+    docker logs -n 5 containerid
+
+    docker logs -n 5 -t containerid
 
 ### Docker port mapping
 
-	docker run react-app
-	
-	docker run -d -p 3000:3000 --name c1 react-app (3000:3000)(hostPort:containerport)
-	
-	docker exec c1 ls (by exec we can run any cmd in a container)
-	
-	docker exec -it c1 sh
+    docker run react-app
 
-	pwd
+    docker run -d -p 3000:3000 --name c1 react-app (3000:3000)(hostPort:containerport)
 
-	exit
-	
+    docker exec c1 ls (by exec we can run any cmd in a container)
+
+    docker exec -it c1 sh
+
+    pwd
+
+    exit
+
 ### Stopping and starting Container
 
-	docker stop c1
-	
-	docker ps
-	
-	docker start c1
-	
-	docker ps
-	
+    docker stop c1
+
+    docker ps
+
+    docker start c1
+
+    docker ps
+
 What is the difference between start and run
 
 By using docker run containerid ---> every time we create new container
 
 By using docker start containerid ---> every time we are not create new container
 
+    docker container rm
 
-	docker container rm
-	
-	docker rm c1
-	
-	docker stop containerid
-	
-	docker rm c1
-	
-	docker rm c1 -f
-	
-	docker ps -a | grep c1 (grab specific containers)
-	
-	docker container prune (all stoped container in one go)
-	
+    docker rm c1
+
+    docker stop containerid
+
+    docker rm c1
+
+    docker rm c1 -f
+
+    docker ps -a | grep c1 (grab specific containers)
+
+    docker container prune (all stoped container in one go)
+
 ### Container File System
 
-	docker exec -it containerId sh
-	
-	ls | greap data
-	
-	
-	
+    docker exec -it containerId sh
+
+    ls | greap data
+
 ## Docker volumes
-	
-	 A volume is a storage outside of a container it can be directory in the host and cloud.
-	 
-	  docker volume 
-	  	- create
-	  	- inspect
-	  	-ls
-	  	-prune
-	  	-rm
-	  	
-	docker volume ls
-	
-	docker volume inspect app-data(volumename)
-	
+
+     A volume is a storage outside of a container it can be directory in the host and cloud.
+
+      docker volume
+      	- create
+      	- inspect
+      	-ls
+      	-prune
+      	-rm
+
+    docker volume ls
+
+    docker volume inspect app-data(volumename)
+
 ### Starting a container and create a volume for parsesting data
 
-	docker run -d -p 4000:3000 -v app-data:/app/data react-app
-	
-	docker exec -it 8d3edf sh
-	
-	docker build r-t ecact-app .
-	
+    docker run -d -p 4000:3000 -v app-data:/app/data react-app
+
+    docker exec -it 8d3edf sh
+
+    docker build r-t ecact-app .
+
 Volume is stored outside of the container
 
 If we delete container this file still exists
 
-	docker rm 007d -f
-	
-	docker exec -it ere09023 sh
-	
-	echo hello > log.txt
-	
-	exit
+    docker rm 007d -f
+
+    docker exec -it ere09023 sh
+
+    echo hello > log.txt
+
+    exit
 
 ## Copy file from container to host.
-	
-	docker cp contaienrid:/app/log.txt .
-	
+
+    docker cp contaienrid:/app/log.txt .
+
 ## Copy host to container.
-	
-	echo hello > secret.txt
-		
-	
-	docker cp secrect.txt ee2121:/app
-	
+
+    echo hello > secret.txt
+
+
+    docker cp secrect.txt ee2121:/app
+
 ## MAP project directory to a directory inside a container
 
 map app-data volume to the /app/data directory inside a container
 
-	docker run -d -p 5001:3000 -v $(pwd):/app -v react-app
-	
-	docker logs -f 696 
+    docker run -d -p 5001:3000 -v $(pwd):/app -v react-app
 
+    docker logs -f 696
 
 integration --> client ---> casa ---> (readAccountById...)
 
@@ -658,48 +666,3 @@ apppi/account/list/
 core ---> (account)---> list--->listaccountbybranchid---> listaccountbranchid
 
 api call ---> pass data
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
