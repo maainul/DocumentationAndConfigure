@@ -16,7 +16,7 @@
 	
 		 go get golang.org/x/tools/cmd/goimports
 	 
-	 git ls-files '*.go' | xargs ~/goimports -l
+	 	 git ls-files '*.go' | xargs ~/goimports -l
 
 ## Print in the html page
 
