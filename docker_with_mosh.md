@@ -15,8 +15,12 @@ Reasons :
 An isolated environment for running an application.
 
 Benefits :
+	
 	1. Allow multiple apps in isolation
+	
+	
 	2. Are lightweight
+	
 	3. Use OS of the host
 	
 3. What is virtual machine?
@@ -26,15 +30,21 @@ An abstraction of a machine(Physical hardware)
 Hypervisor is software to use to create or manage virtual machine.
 
 Hypervisor:
+	
 	1. Vmware
+	
 	2. VirtualBox
+	
 	3. Hyper -V (only for windows)
 
 By using hypervisor we can create multiple os
 
 PROBLEMS:
+	
 	1. Each needs a full-blown os
+	
 	2. Slow to start
+	
 	3. Resource intensive
 	
 # Docker in Action
@@ -766,13 +776,15 @@ map app-data volume to the /app/data directory inside a container
 
 	docker run -d -p 5001:3000 -v $(pwd):/app -v react-app
 	
-	docker logs -f 696 
+	docker logs -f 696
+	
+# Docker Compose 
 
+## 1. Remove all container and images
 
-integration --> client ---> casa ---> (readAccountById...)
+	docker container rm -f $(docker container ls -aq)
+	
+	docker image rm -f $(docker container ls -aq)
+	
+	
 
-apppi/account/list/
-
-core ---> (account)---> list--->listaccountbybranchid---> listaccountbranchid
-
-api call ---> pass data
