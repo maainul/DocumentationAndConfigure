@@ -1,23 +1,133 @@
-1. What is docekr ?
-   BUILD, RUN, SHIP applications
+## 1. What is docekr ?
 
-   Docekr is a platform/tools for building, running and shipping applications with a consistent manner.
-   That works development mechine and test and production mechine also.
-   Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
+BUILD, RUN, SHIP applications
 
-Reasons : 1. One or more files missing 2. Software version mismatch 3. Different configurations 2. What is container?
+Docekr is a platform/tools for building, running and shipping applications with a consistent manner.
+That works development mechine and test and production mechine also.
+Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
+
+Reasons :
+
+    1. One or more files missing
+
+    2. Software version mismatch
+
+    3. Different configurations
+
+![5 docker-system](https://user-images.githubusercontent.com/85335954/129874163-39b7d83c-c281-4e2a-8c17-d3b9f9e4a501.png)
+
+## Docker Ecosystem
+
+![1 docker-ecosystem](https://user-images.githubusercontent.com/85335954/129873377-9a8e6448-a72d-491b-ae70-bf3be8d28be6.png)
+
+## Docker Cli and Daemon intraction
+
+![2 Dockerclianddockerdaemon](https://user-images.githubusercontent.com/85335954/129873530-7380bfab-c1b8-4d77-8e7a-4c4947bb2599.png)
+
+1. Create and Run a container
+
+![3 dokcer-run-with-dockerhub](https://user-images.githubusercontent.com/85335954/129873683-8ab8d95f-a7a5-40de-b2a7-564580432e90.png)
+
+    docker run busybox echo Hi there
+
+## 2. What is container?
 
 An isolated environment for running an application.
 
 Benefits :
-<<<<<<< HEAD 1. Allow multiple apps in isolation 2. Are lightweight
-======= 1. Allow multiple apps in isolation 2. Are lightweight
 
-> > > > > > > 82dd1ef1454ed94533cfd8036308bab3fb7f6e83
+    1. Allow multiple apps in isolation
+
+    2. Are lightweight
 
     3. Use OS of the host
 
-3. What is virtual machine?
+## Image and Container
+
+![4 docker-image and container](https://user-images.githubusercontent.com/85335954/129874030-909a2104-6612-4271-9971-133199f59c39.png)
+
+2.Run a container
+
+![6 docker-run](https://user-images.githubusercontent.com/85335954/129874227-b2c5739f-5c38-4b07-bb36-a66f64090572.png)
+
+    docker run busybox ls
+
+3.List of all container
+
+    docker ps
+
+4.Run a container with google ping
+
+    docker run busybox ping google.com
+
+5.List of all container
+
+    docker ps -a
+
+## Create and Run
+
+![7 create-run](https://user-images.githubusercontent.com/85335954/129874270-1e661931-b172-4c54-9fa0-7790178eeee5.png)
+
+6.Just create a project
+
+    docker create hello-world
+
+7.Start and execute project
+
+    docker start -a 987aeb324b54i0
+
+8.It will only start a project not execute
+
+    docker start 987aeb324b54i0
+
+9.Remove all container(Caution)
+
+    docker system prune
+
+10. Logs of docker container
+
+![8 logs](https://user-images.githubusercontent.com/85335954/129874358-d3501d46-af5e-46f1-9740-e3592dc712b2.png)
+
+    docker logs 98pef4g464 (containerId)
+
+11. Stopping a Continer
+
+![10 stop-and-kill](https://user-images.githubusercontent.com/85335954/129874437-1524350e-cab1-47b8-8b66-e29903681588.png)
+
+Little bit time to stop.10 sec need to stop a container
+
+    docker stop 98pef4g464
+
+You have to shutdown now.No time needed
+
+    docker kill 98pef4g464
+
+## Install Redis image
+
+12.Create and run redis db
+
+    docker run redis
+
+It will show an error.Because our redis-cli is not in the docker container.So we have to integrate this with docker container
+
+    redis-cli
+
+13. Execute commands in Running containers.
+
+![additionalcommand](https://user-images.githubusercontent.com/85335954/129874509-b0ed44ef-febd-46a4-b8ac-b8ffffc20dce.png)
+
+By Using the exec cmd we can run a second running program inside out container.
+docker exec -it 98pef4g464 redis-cli
+
+interactive with terminal
+
+    docker exec -t 98pef4g464 sh
+
+14.starting with a shell
+
+    docker run -it busybox sh
+
+## 3. What is virtual machine?
 
 An abstraction of a machine(Physical hardware)
 
@@ -29,7 +139,13 @@ By using hypervisor we can create multiple os
 
 PROBLEMS: 1. Each needs a full-blown os 2. Slow to start 3. Resource intensive
 
-# Docker in Action
+## Show Status of Docker
+
+    systemctl status docker
+
+    systemctl start docker
+
+## Docker in Action
 
 create directory and create file app.js
 
@@ -634,6 +750,22 @@ check the docker repository. You will see in the docker hub 2 tag. 1,2.
 
     docker logs -n 5 -t containerid
 
+## Port Mapping
+
+![portmapping](https://user-images.githubusercontent.com/85335954/130363208-c887de9d-22bc-467e-89f4-d48284a6fd8a.png)
+
+![portmapping-2](https://user-images.githubusercontent.com/85335954/130363238-79395163-0f90-4e7c-9345-4577bca45838.png)
+
+![portmapping-3](https://user-images.githubusercontent.com/85335954/130363244-bff85d06-989c-4e17-928d-100c07e2c9ca.png)
+
+Host port and docker container port can be different
+
+    Let's try
+
+    docker run -p 5000:8080 maainul/simpleweb
+
+    localhost:5000
+
 ### Docker port mapping
 
     docker run react-app
@@ -740,8 +872,101 @@ map app-data volume to the /app/data directory inside a container
 
 # Docker Compose
 
+We may have multiple continers we have to manage multiple containers.
+
+Docker compose is a tools for defining and running multi-continer docker application.
+
+Use yaml file to configure applications
+
+With single command we should be able to build and start containers
+
+Terminationg containers also easy by executing single containers
+
 ## 1. Remove all container and images
 
     docker container rm -f $(docker container ls -aq)
 
     docker image rm -f $(docker container ls -aq)
+
+## Let's Create Compose file
+
+Project Structure:
+
+    frontend(folder) ----> Dockerfile
+
+    backend(folder) -----> Dockerfile
+    docker-compose.yml
+
+FIrst Two things will be in the compose file
+
+Version: Specify
+Services: containers
+
+```yml
+version: "3.8"
+services:
+	web:(frontend)
+	api:(backend)
+	db:(database)
+```
+
+Let's add Data to yml file
+
+```yml
+version: "3.8"
+services:
+	web:
+		build: ./frontend (this means current working direccotry frontend folder)
+	api:
+		build: ./backend (this means current working direccotry backend folder)
+	db:
+		image: mongo:4.0-xenial
+```
+
+## Define Ports in the container
+
+```yml
+version: "3.8"
+services:
+	web:
+		build: ./frontend (this means current working direccotry frontend folder)
+		ports:
+			-3000:3000 # (hostport : container_port)
+	api:
+		build: ./backend (this means current working direccotry backend folder)
+		ports:
+			- 3001:3001
+	db:
+		image: mongo:4.0-xenial
+		ports:
+			- 27017:27017
+```
+
+## Define Ports in the container with network
+
+```yml
+version: "3.8"
+services:
+	web:
+		build: ./frontend (this means current working direccotry frontend folder)
+		ports:
+			-3000:3000 # (hostport : container_port)
+		environment:
+			DB_URL: mongodb://db/vidly
+	api:
+		build: ./backend (this means current working direccotry backend folder)
+		ports:
+			- 3001:3001
+	db:
+		image: mongo:4.0-xenial
+		ports:
+			- 27017:27017
+```
+
+### Commands
+
+    docker-compose build
+
+    docker-compose up
+
+    docker-compose ps
