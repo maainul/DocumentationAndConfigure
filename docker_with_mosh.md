@@ -816,9 +816,12 @@ By using docker start containerid ---> every time we are not create new containe
 
     ls | greap data
 
-## Docker volumes
+# Docker Volume
 
-     A volume is a storage outside of a container it can be directory in the host and cloud.
+By default any data generate in the container at runtime. All data is deleted if container is terminated.When a container is terminated it also deleted the file system.This behaviour
+is not go for database applications.But we need data if container is crushed or deleted.So for that we can use docker volume.
+
+A volume is a storage outside of a container it can be directory in the host and cloud.
 
       docker volume
       	- create
@@ -831,25 +834,69 @@ By using docker start containerid ---> every time we are not create new containe
 
     docker volume inspect app-data(volumename)
 
-### Starting a container and create a volume for parsesting data
+    docker run -itd alpine
+
+    docker exec -it 87ret8e4 bash/sh
+
+    ls
+
+    mkdir mainul
+
+    cd mainul
+
+    touch file1.txt
+
+    vi file1.txt (write something)
+
+    exit
+
+    docker ps
+
+    docker rm -f 87ret8e4
+
+    docker run -itd alpine
+
+    docker exec -it 587edd44ds
+
+No data found and new contaiener id is found
+
+    docker volume create new_volume
+
+    docker volume inspect new_volume
+
+    docker run -itd -v new_volume:/app alpine # (mycomputer directory : container data folder)
+
+    cd app
+
+    touch file1.txt
+
+    vi touch file1.txt # (write something)
+
+    docker rm -f containerid
+
+    sudo su
+
+    cd /var/lib/docker/volumes/new_volume/_data
+
+    ls
+
+    cat info.txt
+
+    docker run -itd -v new_volume:/app alpine
+
+    ls
+
+    cat info.txt
+
+### Starting a container and create a volume for parsesting data with react app and port mapping
 
     docker run -d -p 4000:3000 -v app-data:/app/data react-app
 
     docker exec -it 8d3edf sh
 
-    docker build r-t ecact-app .
+    docker build -t recact-app .
 
-Volume is stored outside of the container
-
-If we delete container this file still exists
-
-    docker rm 007d -f
-
-    docker exec -it ere09023 sh
-
-    echo hello > log.txt
-
-    exit
+Volume is stored outside of the container int host machine.
 
 ## Copy file from container to host.
 
@@ -951,8 +998,8 @@ services:
 		build: ./frontend (this means current working direccotry frontend folder)
 		ports:
 			-3000:3000 # (hostport : container_port)
-		environment:
-			DB_URL: mongodb://db/vidly
+		environment: # tells where our database is
+			- DB_URL: mongodb://db/vidly # mongodb connection string #vidly is db name
 	api:
 		build: ./backend (this means current working direccotry backend folder)
 		ports:
@@ -961,6 +1008,11 @@ services:
 		image: mongo:4.0-xenial
 		ports:
 			- 27017:27017
+		volumes:
+		- vidly:/data/db
+
+volumes:
+	vidly:
 ```
 
 ### Commands
@@ -970,3 +1022,162 @@ services:
     docker-compose up
 
     docker-compose ps
+
+## Network
+
+    docker network ls
+
+    docker exec -it -u root 8c6 sh
+
+    ifconfig
+
+## Publishing changes And Persistent data Volume
+
+```yml
+version: "3.8"
+services:
+	web:
+		build: ./frontend (this means current working direccotry frontend folder)
+		ports:
+			-3000:3000 # (hostport : container_port)
+		environment: # tells where our database is
+			- DB_URL: mongodb://db/vidly # mongodb connection string #vidly is db name
+		volumes:
+			- ./frontend:/app #go to the frontend directory and map to /app directory inside the container
+	api:
+		build: ./backend (this means current working direccotry backend folder)
+		ports:
+			- 3001:3001
+		volumes:
+			- ./backend:/app # go to the backend directory and map to /app directory inside the container
+	db:
+		image: mongo:4.0-xenial
+		ports:
+			- 27017:27017
+		volumes:
+		- vidly:/data/db
+
+volumes:
+	vidly:
+```
+
+Run This command :
+
+    docker-compose up
+
+nodemon not found
+
+    cd backend
+
+    npm install
+
+
+    docker-compose up
+
+    localhost:3001/api
+
+Same follow to the frontend also..... TRY
+
+nodemon not found
+
+    cd frontend
+
+    npm install
+
+    docker-compose up
+
+    localhost:3001/api
+
+## Migration :
+
+```yaml
+version: "3.8"
+services:
+	web:
+		build: ./frontend (this means current working direccotry frontend folder)
+		ports:
+			-3000:3000 # (hostport : container_port)
+		environment: # tells where our database is
+			- DB_URL: mongodb://db/vidly # mongodb connection string #vidly is db name
+		volumes:
+			- ./frontend:/app #go to the frontend directory and map to /app directory inside the container
+	api:
+		build: ./backend (this means current working direccotry backend folder)
+		ports:
+			- 3001:3001
+		volumes:
+			- ./backend:/app # go to the backend directory and map to /app directory inside the container
+        command: ./wait for db:27017 && migrate-mongo up && npm start # This cmd is very long. So we can create entry point script. So create in the root directory docker-entrypoint.sh
+	db:
+		image: mongo:4.0-xenial
+		ports:
+			- 27017:27017
+		volumes:
+		- vidly:/data/db
+
+volumes:
+	vidly:
+```
+
+## Create a docker-entrypoint.sh
+
+```sh
+
+echo "Waiting for MongoDB to start....."
+./wait-for db:27017
+
+echo "Migrating the database..."
+npm run db:up
+
+echo "Starting the server..."
+npm start
+```
+
+Go the docker-compose file and simplyfly the cmd
+
+```yml
+version: "3.8"
+services:
+	web:
+		build: ./frontend (this means current working direccotry frontend folder)
+		ports:
+			-3000:3000 # (hostport : container_port)
+		environment: # tells where our database is
+			- DB_URL: mongodb://db/vidly # mongodb connection string #vidly is db name
+		volumes:
+			- ./frontend:/app #go to the frontend directory and map to /app directory inside the container
+	api:
+		build: ./backend (this means current working direccotry backend folder)
+		ports:
+			- 3001:3001
+		volumes:
+			- ./backend:/app # go to the backend directory and map to /app directory inside the container
+        command: ./docker-entrypoint.sh
+	db:
+		image: mongo:4.0-xenial
+		ports:
+			- 27017:27017
+		volumes:
+		- vidly:/data/db
+
+volumes:
+	vidly:
+```
+
+Let's Check is it working or not
+
+    docker volume ls
+
+    docker volume rm volumename_volumename
+
+    docker-compose up
+
+    localhost:3001/api
+
+    localhost:3001/api/movies
+
+## Reduce Image size in the Production Environment
+
+    cd frontend
+
+    npm run build
