@@ -14,15 +14,15 @@
 
 4. display files data
 
-		cat 
+		cat filename
 
 5. Display argument to the screen
 	
-		echo
+		echo filename
 
 6. Display online manual
 	
-		man
+		man commandname
 
 7. Exit current session
 	
@@ -32,8 +32,60 @@
 	
 		clear
 
+9. Make directory 
+	
+		mkdir filename
+	
+10. Making Multiple directory
 
-1. Show file info
+		mkdir -p dir1/dir2/dir3
+
+11. Remove dirctory
+	
+		rmdir dir1
+
+12. Remove multiple directory
+
+		rm -rf dir1
+
+13. Go the the previous directory
+	
+		cd -
+
+14. list directory 
+	
+		ls -l
+	
+		ls -l -a (ls -la)
+	
+		ls -laF (F = FileType)
+		
+		ls -t (list files by time)
+		
+		ls -r (Reverse order)
+		
+		ls -latr (long listing,all files,reverse, sort by time)
+		
+		ls -d
+		
+		ls -dF
+		
+		ls --color
+		
+		ls -l Music
+		
+		ls -ld Music
+		
+15. Tree command to list of files
+	
+		tree -d
+		
+		tree -c
+		
+		
+		
+
+17. Show file info
 
 		cat App.js
 
