@@ -2,64 +2,64 @@
 
 1. List directory
 	
-	ls
+		ls
 
 2. Change dirctory
 	
-	cd
+		cd
 
 3. Display current working dirctory
 	
-	pwd
+		pwd
 
 4. display files data
 
-	cat 
+		cat 
 
 5. Display argument to the screen
 	
-	echo
+		echo
 
 6. Display online manual
 	
-	man
+		man
 
 7. Exit current session
 	
-	exit
+		exit
 
 8. Clear the screen
 	
-	clear
+		clear
 
 
 1. Show file info
 
-	cat App.js
+		cat App.js
 
 2. See first 10 line
 	
-	head App.js
+		head App.js
 
 3. See first 2 line
 
-	head -2 App.js
+		head -2 App.js
 	
 4. See last 10 line
 	
-	tail App.js
+		tail App.js
 
 5. See last 2 line
 
-	tail -2 App.js
+		tail -2 App.js
 
 6. See page wise
 	
-	more App.js
+		more App.js
 	
 7. see line by line	
 	
-	less App.js
+		less App.js
 
 
 					
