@@ -1,3 +1,12 @@
+#Yokke
+
+	ipg-worker/cmd------> handler
+
+
+	ipg-worker/worker ------> imple
+
+	intergations ----> intreget 3rd party api
+
 ## Vscode shortcut
 
 	sort ascending vs code ---> ctrl + p ---> sort ascending
