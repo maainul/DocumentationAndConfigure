@@ -1,3 +1,12 @@
+# Yokke
+
+	ipg-worker/cmd------> handler
+
+
+	ipg-worker/worker ------> imple
+
+	intergations ----> intreget 3rd party api
+
 ## Vscode shortcut
 
 	sort ascending vs code ---> ctrl + p ---> sort ascending
@@ -5,10 +14,24 @@
 	terminal ---> ctrl + j
 
 
-## FOrmate code 
+## Formate code 
 
 	git ls-files '*.go' | xargs gofumpt -d -s
 
+
+## Formate imports 
+
+	1. if imports not available 
+	
+		 go get golang.org/x/tools/cmd/goimports
+	 
+	 	 git ls-files '*.go' | xargs ~/goimports -l
+
+## Print in the html page
+
+	fmt.Fprintf(w, "form = %+v", form)
+	
+	http.Error(w, "ERROR_PRINT158:"+err.Error(), http.StatusInternalServerError)
 
 ## Docker For Netbank
 
