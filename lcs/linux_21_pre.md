@@ -1,6 +1,15 @@
 # Linux Important cmd
 
 ## Basic Cmd
+
+## File Display CMD
+
+1. cat
+2. more
+3. less
+4. head
+5. tail
+	
  List directory
 	
 		ls
@@ -103,7 +112,7 @@
 		tree -c
 
 
- Finding Files
+## Finding Files
 	
 		find .
 		
@@ -114,7 +123,7 @@
 		find /sbin -name makedif
 
 
- Find files 10 days old but less than 30 than pwd
+## Find files 10 days old but less than 30 than pwd
 
 		find . -mtime +10 -mtime -13
 		
@@ -156,7 +165,7 @@
 		less App.js
 
 
- Copy files
+## Copy files
 
 		cp src dest
 
@@ -167,12 +176,12 @@
 		cp -r dir1 dir2
 
 
- Moving and rename files
+## Moving and rename files
 
 		mv src dest (rename dirctory src to dest)
 
 		mv -i src dst
- Sorting Data
+## Sorting Data
 
 		sort more.txt
 
@@ -236,10 +245,7 @@
 		p --> named pipe
 		
 		b--> block device
-
-		
-		
-		
+	
 ## Read and write files
 
 		cat file1.txt > file2.txt ---> read file1 and write data file2
@@ -277,6 +283,44 @@ append line in the existing file
 Check how many character in a file
 
 		wc -c file2.txt
+
+
+## Pipes : Connects two or many commands
+
+		cd /etc
+		
+show files and one page at a time
+
+		ls -ltr | more
+
+Show last lines of output
+
+		ls -ltr | tail -1
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
