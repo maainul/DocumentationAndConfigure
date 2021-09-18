@@ -1,14 +1,6 @@
 # Linux Important cmd
 
 ## Basic Cmd
-
-## File Display CMD
-
-1. cat
-2. more
-3. less
-4. head
-5. tail
 	
  List directory
 	
@@ -133,9 +125,14 @@
 
 		find . -type d -newer file.txt
 
-		
-## Viewing Files
+## File Display CMD / Viewing Files
 
+1. cat
+2. more
+3. less
+4. head
+5. tail
+		
  Show file info
 
 		cat App.js
@@ -246,20 +243,8 @@
 		
 		b--> block device
 	
-## Read and write files
 
-		cat file1.txt > file2.txt ---> read file1 and write data file2
-
-		cat file1.txt file2.txt --> read multiple files
-
-		cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
-
-		echo hello file1.txt
-
-		ls -l /etc > files.txt
-
-		cat files.txt		
-
+------------------------------ Video 10--------------------
 ## Standard Output with tee
 
 Read data
@@ -284,7 +269,7 @@ Check how many character in a file
 
 		wc -c file2.txt
 
-
+------------------------------------- video 11---------------------
 ## Pipes : Connects two or many commands
 
 		cd /etc
@@ -297,8 +282,29 @@ Show last lines of output
 
 		ls -ltr | tail -1
 		
-		
-		
+---------------------------- video 13-------------------
+## Read and write files
+
+		cat file1.txt > file2.txt ---> read file1 and write data file2
+
+		cat file1.txt file2.txt --> read multiple files
+
+		cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
+
+		echo hello file1.txt
+
+		ls -l /etc > files.txt
+
+		cat files.txt		
+
+## Filters/ Text Processors Commands
+
+1. cut
+2. awk
+3. greap and egrep
+4. sort
+5. uniq		
+6. wc
 
 
 
