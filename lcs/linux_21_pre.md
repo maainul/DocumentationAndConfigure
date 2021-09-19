@@ -1,129 +1,98 @@
 # Linux Important cmd
 
 ## Basic Cmd
-	
- List directory
-	
-		ls
-		
- Change dirctory
-	
-		cd
-		
- Display current working dirctory
-	
-		pwd
-		
- display files data
 
-		cat filename
-		
- Display argument to the screen
-	
-		echo filename
-		
- Display online manual
-	
-		man commandname
-		
- Exit current session
-	
-		exit
-		
- Clear the screen
-	
-		clear
-		
- Make directory 
-	
-		mkdir filename
-	
- Making Multiple directory
+List directory
+ls
+Change dirctory
+cd
+Display current working dirctory
+pwd
+display files data
 
-		mkdir -p dir1/dir2/dir3
+    	cat filename
 
- Remove dirctory
-	
-		rmdir dir1
+Display argument to the screen
+echo filename
+Display online manual
+man commandname
+Exit current session
+exit
+Clear the screen
+clear
+Make directory
+mkdir filename
+Making Multiple directory
 
- Remove multiple directory
+    	mkdir -p dir1/dir2/dir3
 
-		rm -rf dir1
+Remove dirctory
+rmdir dir1
 
- Go the the previous directory
-	
-		cd -
-		
+Remove multiple directory
+
+    	rm -rf dir1
+
+Go the the previous directory
+cd -
+
 ## List Directory CMD
 
- list directory 
-	
-		ls -l
-		
- list directory with all files
+list directory
+ls -l
+list directory with all files
 
-		ls -l -a (ls -la)
+    	ls -l -a (ls -la)
 
- list directory with filetype
-	
-		ls -laF (F = FileType)
+list directory with filetype
+ls -laF (F = FileType)
 
- list files with time		
-		ls -t (list files by time)
-		
- list files with files and reverse order
+list files with time
+ls -t (list files by time)
+list files with files and reverse order
 
-		ls -r (Reverse order)
+    	ls -r (Reverse order)
 
- list long with files reverse sort time
-		
-		ls -latr (long listing,all files,reverse, sort by time)
+list long with files reverse sort time
+ls -latr (long listing,all files,reverse, sort by time)
 
- list with directory
-	
-		ls -d
+list with directory
+ls -d
 
- list files with color
-		
-		ls --color
+list files with color
+ls --color
 
- list Music files name
+list Music files name
 
-		ls -l Music
+    	ls -l Music
 
- list Music directory Music
-	
-		ls -ld Music
-		
- Tree command to list of files
-	
-		tree -d
+list Music directory Music
+ls -ld Music
+Tree command to list of files
+tree -d
 
- Tree command with color
-		
-		tree -c
-
+Tree command with color
+tree -c
 
 ## Finding Files
-	
-		find .
-		
-		find
 
-		find -iname anyname
+    	find .
 
-		find /sbin -name makedif
+    	find
 
+    	find -iname anyname
+
+    	find /sbin -name makedif
 
 ## Find files 10 days old but less than 30 than pwd
 
-		find . -mtime +10 -mtime -13
-		
-		find . -name s* -ls
-		
-		find . -size +1kb
+    	find . -mtime +10 -mtime -13
 
-		find . -type d -newer file.txt
+    	find . -name s* -ls
+
+    	find . -size +1kb
+
+    	find . -type d -newer file.txt
 
 ## File Display CMD / Viewing Files
 
@@ -132,170 +101,220 @@
 3. less
 4. head
 5. tail
-		
- Show file info
 
-		cat App.js
+Show file info
 
- See first 10 line
-	
-		head App.js
+    	cat App.js
 
- See first 2 line
+See first 10 line
+head App.js
 
-		head -2 App.js
-	
- See last 10 line
-	
-		tail App.js
+See first 2 line
 
- See last 2 line
+    	head -2 App.js
 
-		tail -2 App.js
+See last 10 line
+tail App.js
 
- See page wise
-	
-		more App.js
-	
- see line by line	
-	
-		less App.js
+See last 2 line
 
+    	tail -2 App.js
+
+See page wise
+more App.js
+see line by line
+less App.js
 
 ## Copy files
 
-		cp src dest
+    	cp src dest
 
-		cp src_fil1 src_file2 dest_dir
+    	cp src_fil1 src_file2 dest_dir
 
-		cp - i file1 file2
+    	cp - i file1 file2
 
-		cp -r dir1 dir2
-
+    	cp -r dir1 dir2
 
 ## Moving and rename files
 
-		mv src dest (rename dirctory src to dest)
+    	mv src dest (rename dirctory src to dest)
 
-		mv -i src dst
+    	mv -i src dst
+
 ## Sorting Data
 
-		sort more.txt
+    	sort more.txt
 
-		sort -u more.txt
-
+    	sort -u more.txt
 
 ## Create Directory and Files
 
-		cp
-		
-		touch
+    	cp
 
-		vi		
+    	touch
+
+    	vi
+
 ## CMDS
 
-		
-		mv test newfilename
-		
-		touch hello.txt
-		
-		touch hello1.txt hello2.txt
-		
-		rm -r docker/
-		
-		vi file1.txt
+    	mv test newfilename
 
-## WildCards 
+    	touch hello.txt
 
-		* - zero or more character
+    	touch hello1.txt hello2.txt
 
-		? - a single character
+    	rm -r docker/
 
-		[] - a range of characters
+    	vi file1.txt
+
+## WildCards
+
+    	* - zero or more character
+
+    	? - a single character
+
+    	[] - a range of characters
 
 ## create files using wildcards
 
-		touch 
+    	touch
 
-		rm abc*
+    	rm abc*
 
-		touch abcd{1..9}-xyz
-		
-		ls -l abc*
+    	touch abcd{1..9}-xyz
 
-		rm abcd*
+    	ls -l abc*
 
-		ls -l ?bcd*
+    	rm abcd*
 
-		ls -l ?[cd]*
-				
+    	ls -l ?bcd*
+
+    	ls -l ?[cd]*
+
 ## Linux file types
 
-		- --> regular file
-		
-		l --> link
-		
-		c --> special file
-		
-		s --> socket
-		
-		p --> named pipe
-		
-		b--> block device
-	
+    	- --> regular file
+
+    	l --> link
+
+    	c --> special file
+
+    	s --> socket
+
+    	p --> named pipe
+
+    	b--> block device
+
+## Permissions
+
+Types of Permissions:
+
+1.  r - read
+2.  w - write
+3.  x - running a program (executable)
+
+rwx
+
+Types of permission group
+
+1.  u - user
+2.  g- group
+3.  o - other
+
+Command to change permisson
+
+    	chmod
+
+    	chmod ugo+r FILE
+
+change Permission
+
+    	chmod g+w sales.txt (change sales.txt to write permission)
+
+    	chmod g-w sales.txt (remove permission)
+
+        chmod g+wx sales.txt (multiple permissions)
+
+        chmod u+rwx,g-x sales.txt
+
+        chmod a=r sales.txt
+
+        chmod u=rwx,g=rw o= sales.txt (after o= no value means no permission to other)
+
+    	chmod a-r file.txt (remove read permission for everyone)
+
+5.  Numeric Based Permissions
+
+        chmod ugo+ FILE
+
+or
+
+        chmod 444 FILE
+
+## Permission list
+
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
+
+        chmod 400 my-cat (dr--------)
+
+        chmod 500 my-cat (dr-x------)
 
 ------------------------------ Video 10--------------------
+
 ## Standard Output with tee
 
 Read data
-		
-		echo "mainul hasan"
+echo "mainul hasan"
 
 Create File with some text
 
-		echo "mainul" > file.txt
+    	echo "mainul" > file.txt
 
 Create file and write data and show lines
-	
-		echo "this is me" | tee file2.txt
+echo "this is me" | tee file2.txt
 
 append line in the existing file
 
-		echo "This is second line" | tee -a file2.txt
+    	echo "This is second line" | tee -a file2.txt
 
-		cat file2.txt
+    	cat file2.txt
 
 Check how many character in a file
 
-		wc -c file2.txt
+    	wc -c file2.txt
 
 ------------------------------------- video 11---------------------
+
 ## Pipes : Connects two or many commands
 
-		cd /etc
-		
+    	cd /etc
+
 show files and one page at a time
 
-		ls -ltr | more
+    	ls -ltr | more
 
 Show last lines of output
 
-		ls -ltr | tail -1
-		
+    	ls -ltr | tail -1
+
 ---------------------------- video 13-------------------
+
 ## Read and write files
 
-		cat file1.txt > file2.txt ---> read file1 and write data file2
+    	cat file1.txt > file2.txt ---> read file1 and write data file2
 
-		cat file1.txt file2.txt --> read multiple files
+    	cat file1.txt file2.txt --> read multiple files
 
-		cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
+    	cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
 
-		echo hello file1.txt
+    	echo hello file1.txt
 
-		ls -l /etc > files.txt
+    	ls -l /etc > files.txt
 
-		cat files.txt		
+    	cat files.txt
 
 ## Filters/ Text Processors Commands
 
@@ -303,31 +322,5 @@ Show last lines of output
 2. awk
 3. greap and egrep
 4. sort
-5. uniq		
+5. uniq
 6. wc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
