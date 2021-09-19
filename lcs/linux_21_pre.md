@@ -253,16 +253,83 @@ or
 
 ## Permission list
 
-| First Header | Second Header |
-| ------------ | ------------- |
-| Content Cell | Content Cell  |
-| Content Cell | Content Cell  |
+![chmod-Notation-1](https://user-images.githubusercontent.com/85335954/133926158-8380423e-ac36-4213-ac4f-5cfdfe08cf03.png)
+
+If type
+
+    chmod 644 files.txt
+
+![chmod-octal-format-explained](https://user-images.githubusercontent.com/85335954/133926227-b8743324-6b8e-4a89-94c5-d4d558c2f900.jpg)
 
         chmod 400 my-cat (dr--------)
 
         chmod 500 my-cat (dr-x------)
 
------------------------------- Video 10--------------------
+## File Ownership
+
+1.  chown
+2.  chgrp
+
+        chown root lisa
+
+        chgrp root lisa
+
+## Access Control List(ACL) : Provides an additional,more flexible permission mechanism for file systems
+
+user is not a member of group created by you but still you want to give some read or write access,how can you do it without making user a member of group.
+
+Add permission to the user
+
+    	setfacl -m u:user:rwx /path/to/file
+
+Add permission to the group
+
+    	setfacl -m g:group:rw /path/to/file
+
+To remove specific entry
+
+    	setfacl -x u:user /path/to/file
+
+To remove all entries
+
+    	setfacl -b path/to/file
+
+Show the file permission of a file
+
+    	getfacl filename
+
+# Not Complete--------------------------X X X
+
+## Help CMD
+
+    	whatis
+
+    	help
+
+    	man
+
+
+    	whatis ls
+
+    	whatis cd
+
+    	whatis pwd
+
+## Adding Text to files
+
+3 way to add text to a file
+
+1.  vi
+2.  Redirect command output
+3.  echo > or >>
+
+Create file and write line >
+
+        echo "it is raining outside" > rain.txt
+
+Append line in the second line >>
+
+        echo "it is raining again second line" >> rain.txt
 
 ## Standard Output with tee
 
@@ -286,8 +353,6 @@ Check how many character in a file
 
     	wc -c file2.txt
 
-------------------------------------- video 11---------------------
-
 ## Pipes : Connects two or many commands
 
     	cd /etc
@@ -299,8 +364,6 @@ show files and one page at a time
 Show last lines of output
 
     	ls -ltr | tail -1
-
----------------------------- video 13-------------------
 
 ## Read and write files
 
