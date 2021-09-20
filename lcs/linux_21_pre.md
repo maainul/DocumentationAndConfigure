@@ -3,86 +3,112 @@
 ## Basic Cmd
 
 List directory
-ls
+	
+		ls
+
 Change dirctory
-cd
+		cd
+
 Display current working dirctory
-pwd
+		pwd
+	
 display files data
 
-    	cat filename
+		cat filename
 
 Display argument to the screen
-echo filename
+	
+		echo filename
+
 Display online manual
-man commandname
+		man commandname
+		
 Exit current session
-exit
+
+		exit
+
 Clear the screen
-clear
+
+		clear
+
 Make directory
-mkdir filename
+
+		mkdir filename
+
 Making Multiple directory
 
-    	mkdir -p dir1/dir2/dir3
+		mkdir -p dir1/dir2/dir3
 
 Remove dirctory
-rmdir dir1
+		
+		rmdir dir1
 
 Remove multiple directory
 
-    	rm -rf dir1
+		rm -rf dir1
 
 Go the the previous directory
-cd -
+
+		cd -
 
 ## List Directory CMD
 
 list directory
-ls -l
+		ls -l
+
 list directory with all files
 
-    	ls -l -a (ls -la)
+		ls -l -a (ls -la)
 
 list directory with filetype
-ls -laF (F = FileType)
+
+		ls -laF (F = FileType)
 
 list files with time
-ls -t (list files by time)
+
+		ls -t (list files by time)
+
 list files with files and reverse order
 
-    	ls -r (Reverse order)
+		ls -r (Reverse order)
 
 list long with files reverse sort time
-ls -latr (long listing,all files,reverse, sort by time)
+
+		ls -latr (long listing,all files,reverse, sort by time)
 
 list with directory
-ls -d
+		
+		ls -d
 
 list files with color
-ls --color
+
+		ls --color
 
 list Music files name
 
-    	ls -l Music
+		ls -l Music
 
 list Music directory Music
-ls -ld Music
+
+		ls -ld Music
+
 Tree command to list of files
-tree -d
+		
+		tree -d
 
 Tree command with color
-tree -c
+
+		tree -c
 
 ## Finding Files
 
-    	find .
+	    	find .
 
-    	find
+	    	find
 
-    	find -iname anyname
+	    	find -iname anyname
 
-    	find /sbin -name makedif
+	    	find /sbin -name makedif
 
 ## Find files 10 days old but less than 30 than pwd
 
@@ -104,26 +130,31 @@ tree -c
 
 Show file info
 
-    	cat App.js
+		cat App.js
 
 See first 10 line
-head App.js
+
+		head App.js
 
 See first 2 line
 
-    	head -2 App.js
+		head -2 App.js
 
 See last 10 line
-tail App.js
+
+		tail App.js
 
 See last 2 line
 
-    	tail -2 App.js
+		tail -2 App.js
 
 See page wise
-more App.js
+
+		more App.js
+
 see line by line
-less App.js
+		
+		less App.js
 
 ## Copy files
 
