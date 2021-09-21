@@ -260,27 +260,27 @@ Command to change permisson
 
 change Permission
 
-    	chmod g+w sales.txt (change sales.txt to write permission)
+		chmod g+w sales.txt (change sales.txt to write permission)
 
-    	chmod g-w sales.txt (remove permission)
+		chmod g-w sales.txt (remove permission)
 
-        chmod g+wx sales.txt (multiple permissions)
+		chmod g+wx sales.txt (multiple permissions)
 
-        chmod u+rwx,g-x sales.txt
+		chmod u+rwx,g-x sales.txt
 
-        chmod a=r sales.txt
+		chmod a=r sales.txt
 
-        chmod u=rwx,g=rw o= sales.txt (after o= no value means no permission to other)
+		chmod u=rwx,g=rw o= sales.txt (after o= no value means no permission to other)
 
-    	chmod a-r file.txt (remove read permission for everyone)
+		chmod a-r file.txt (remove read permission for everyone)
 
 5.  Numeric Based Permissions
 
-        chmod ugo+ FILE
+		chmod ugo+ FILE
 
 or
 
-        chmod 444 FILE
+		chmod 444 FILE
 
 ## Permission list
 
@@ -301,9 +301,9 @@ If type
 1.  chown
 2.  chgrp
 
-        chown root lisa
+		chown root lisa
 
-        chgrp root lisa
+		chgrp root lisa
 
 ## Access Control List(ACL) : Provides an additional,more flexible permission mechanism for file systems
 
@@ -311,23 +311,23 @@ user is not a member of group created by you but still you want to give some rea
 
 Add permission to the user
 
-    	setfacl -m u:user:rwx /path/to/file
+		setfacl -m u:user:rwx /path/to/file
 
 Add permission to the group
 
-    	setfacl -m g:group:rw /path/to/file
+		setfacl -m g:group:rw /path/to/file
 
 To remove specific entry
 
-    	setfacl -x u:user /path/to/file
+		setfacl -x u:user /path/to/file
 
 To remove all entries
 
-    	setfacl -b path/to/file
+		setfacl -b path/to/file
 
 Show the file permission of a file
 
-    	getfacl filename
+		getfacl filename
 
 # Not Complete--------------------------X X X
 
@@ -338,7 +338,6 @@ Show the file permission of a file
     	help
 
     	man
-
 
     	whatis ls
 
@@ -365,50 +364,52 @@ Append line in the second line >>
 ## Standard Output with tee
 
 Read data
-echo "mainul hasan"
+
+		echo "mainul hasan"
 
 Create File with some text
 
-    	echo "mainul" > file.txt
+		echo "mainul" > file.txt
 
 Create file and write data and show lines
-echo "this is me" | tee file2.txt
+
+		echo "this is me" | tee file2.txt
 
 append line in the existing file
 
-    	echo "This is second line" | tee -a file2.txt
+		echo "This is second line" | tee -a file2.txt
 
-    	cat file2.txt
+		cat file2.txt
 
 Check how many character in a file
 
-    	wc -c file2.txt
+		wc -c file2.txt
 
 ## Pipes : Connects two or many commands
 
-    	cd /etc
+		cd /etc
 
 show files and one page at a time
 
-    	ls -ltr | more
+		ls -ltr | more
 
 Show last lines of output
 
-    	ls -ltr | tail -1
+		ls -ltr | tail -1
 
 ## Read and write files
 
-    	cat file1.txt > file2.txt ---> read file1 and write data file2
+		cat file1.txt > file2.txt ---> read file1 and write data file2
 
-    	cat file1.txt file2.txt --> read multiple files
+		cat file1.txt file2.txt --> read multiple files
 
-    	cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
+		cat file1.txt file2.txt > combined.txt ---> read two file and write into 1
 
-    	echo hello file1.txt
+		echo hello file1.txt
 
-    	ls -l /etc > files.txt
+		ls -l /etc > files.txt
 
-    	cat files.txt
+		cat files.txt
 
 ## Filters/ Text Processors Commands
 
@@ -418,3 +419,38 @@ Show last lines of output
 4. sort
 5. uniq
 6. wc
+
+## Cut - Text Processors commands
+
+		cut filename
+
+		cut --version
+
+		cut -c1 filename    = List one character
+
+		cut -c1,2,4 filename = pick and chose character
+
+		cut -c1-3,6-8 filename = list range of character
+		
+		cut -b1-3 filename    = byte size file
+		
+		cut -d: -f 6 /etc/passwd =  6th column separated by
+
+		ls -l | cut -c2-4 = Only print user permissions of files/dir
+
+
+## AWK : utility/language designed for data extraction.Most of the time it is used to extract fields from a file of=r from an output.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
