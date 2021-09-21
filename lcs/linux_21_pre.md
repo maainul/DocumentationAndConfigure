@@ -439,9 +439,9 @@ Show last lines of output
 		ls -l | cut -c2-4 = Only print user permissions of files/dir
 
 
-## AWK : utility/language designed for data extraction.Most of the time it is used to extract fields from a file of=r from an output.
+## AWK : utility/language designed for data extraction.Most of the time it is used to extract fields from a file from an output.
 
-
+		
 
 
 
