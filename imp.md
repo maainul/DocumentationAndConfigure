@@ -21,11 +21,35 @@
 
 	ipg-worker/cmd------> handler
 
-
 	ipg-worker/worker ------> imple
 
 	intergations ----> intreget 3rd party api
+	
+## Run yokke: 
 
+	brankas-ipg/merchant-service
+	
+	merchant-service git:(master) ✗ ./run.sh 
+
+	brankas-ipg/payment-service
+	
+	payment-service git:(master) ✗ ./run.sh 
+
+	brankas-ipg/merchant-webapp   
+	
+	payment-service git:(master) ✗ ./run.sh 
+
+	brankas-ipg/payment-webapp
+
+	payment-service git:(master) ✗ ./run.sh 
+	
+	brankas-ipg /demoshop
+
+	payment-service git:(master) ✗ ./run.sh 
+	
+	brankas-ipg/ go run cmd/mtidirectdebit
+
+	
 ## Vscode shortcut
 
 	sort ascending vs code ---> ctrl + p ---> sort ascending
