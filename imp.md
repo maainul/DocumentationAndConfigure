@@ -1,3 +1,22 @@
+# PetNet conf
+
+## Pull from master petnet and rbac
+
+	git pull upsteam master
+	
+## before docker compose
+
+	export COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1
+	
+	docker-compose down --remove-orphans -v && docker-compose up --build -d
+	
+	go mod vendor
+	
+## See logs
+
+	docker logs petnet_usermgm -f
+
+
 # Yokke
 
 	ipg-worker/cmd------> handler
