@@ -1,12 +1,55 @@
+# PetNet conf
+
+## Pull from master petnet and rbac
+
+	git pull upsteam master
+	
+## before docker compose
+
+	export COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1
+	
+	docker-compose down --remove-orphans -v && docker-compose up --build -d
+	
+	go mod vendor
+	
+## See logs
+
+	docker logs petnet_usermgm -f
+
+
 # Yokke
 
 	ipg-worker/cmd------> handler
 
-
 	ipg-worker/worker ------> imple
 
 	intergations ----> intreget 3rd party api
+	
+## Run yokke: 
 
+	brankas-ipg/merchant-service
+	
+	merchant-service git:(master) ✗ ./run.sh 
+
+	brankas-ipg/payment-service
+	
+	payment-service git:(master) ✗ ./run.sh 
+
+	brankas-ipg/merchant-webapp   
+	
+	payment-service git:(master) ✗ ./run.sh 
+
+	brankas-ipg/payment-webapp
+
+	payment-service git:(master) ✗ ./run.sh 
+	
+	brankas-ipg /demoshop
+
+	payment-service git:(master) ✗ ./run.sh 
+	
+	brankas-ipg/ go run cmd/mtidirectdebit
+
+	
 ## Vscode shortcut
 
 	sort ascending vs code ---> ctrl + p ---> sort ascending
