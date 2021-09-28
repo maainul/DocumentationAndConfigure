@@ -442,11 +442,158 @@ Show last lines of output
 ## AWK : utility/language designed for data extraction.Most of the time it is used to extract fields from a file from an output.
 
 		
+## Grep : Global Regular Ecpression Print : Search features : Search Specific keyword in a file 
 
 
+		grep --version
+
+		grep --help
+
+		grep keyword file
+
+Upper and lower case both
+
+		grep -i keyword file
+
+count keyword
+
+		grep -c keyword file
+
+number of lines
+
+		grep -n keyword file
+
+except this keyword
+
+		grep -v keyword file
 
 
+list files and search desktop
 
+		ls -l | grep Desktop
+
+Multiple files
+
+		egrep -i "keyword1|keyword2" file
+
+## Sort/ uniq - Text Processors Commands
+
+Help or version
+
+		sort --version OR sort --help
+
+Sort file
+		
+		sort file
+		
+Reverse sort file 
+
+		sort -r file
+		
+Sort second column 
+		
+		sort -k2 file
+		
+## Uniq command
+
+		unique file
+	
+Sort file and count 
+
+		sort file | uniq -c
+
+Sort and find duplicate 
+	
+		sort file | uniq -d
+	
+## WC - Text Processors Commands
+
+version check
+	
+		wc --version or wc --help
+	
+		wc file
+
+count line 
+	
+		wc -l file
+
+count word 
+
+		wc -w file
+
+count character
+
+		wc --b file
+
+count directory and files in a directory
+
+		ls -l | wc -l
+		
+list of directory and
+	
+		ls -l | grep drw
+
+directory count		
+
+		ls -l | grep drw | wc -l
+
+
+## Compare Two files
+
+1. diff (Line by line)
+2. cmp (Byte by Byte)
+
+		cmp file1 file2
+		
+		diff file1 file2
+		
+
+## Compress and UnComporss Files
+
+1. tar 
+2. gzip
+3. gzip -d OR gunzip (uncompress)
+
+
+Zip tar file
+
+		tar cvf mainul.tar /home .
+
+Unzip tar file
+	
+		tar xvf mainul.tar
+	
+zip file filename.tar.zip
+	
+		gzip mainul.tar
+
+Unzip file filename.tar.zip
+	
+		gzip -d mainul.tar.gz
+	
+## Truncate File Size (truncate)
+
+	truncate -s 10 filename
+	
+## Combinig and Splitting files
+	
+- Multiple files can be combined into one and
+- One file can be split into multiple files
+
+	cat file1 file2 > file3
+	
+	split file3
+	
+	split -l 300 file.txt sep 
+	
+	split -l 200 filename sep
+	
+- Split file.txt into 300 lines per file and output to childfilea, childfileb and childfilec
+ 
+	
+	
+		
 
 
 
