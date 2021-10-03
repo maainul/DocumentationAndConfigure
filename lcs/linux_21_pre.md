@@ -592,12 +592,264 @@ Unzip file filename.tar.zip
 - Split file.txt into 300 lines per file and output to childfilea, childfileb and childfilec
  
 	
+# System Administration
+
 	
+## Linux File Editor
+
+- vi  - visual editor
+- ed  - standrd line editor
+- ex  - Extednded line editor
+- emacs - A full screen editor
+- pico - Beginner's editor
+- vim - Advance version of vi
+
+
+## Introduction to vi
+	- insert and deleting
+	- replacing text
+	- moving around text file
+	- finding and substituting strings
+	- cutting and pasting text
+
+Most common keys:
+
+		i = insert
+		  
+		Esc - Escape out of any mode
+		
+		r - replace
+		
+		d - delete
+		
+		:q! - quite without saving
+		
+		:wq! - quite
+		
+		k = up
+		
+		j = down
+		
+		l = right
+		
+		h = left
+		
+		w = right 1 word
+
+		b = left 1 word
+
+		^ = beginning of the line
+
+		$ = end of the line
+
+		i = insert cursor position
+
+		a = append after the cursor position
+
+		A = appendt at the end of the line
+
+		:w = write
+
+		:w! = force write
+
+		:q = quite
+
+		:q! = force + quite
+
+		:wq! = write and quite
+
+		:x = same as :wq
+
+		x = delete a character
+
+		dw = delete word
+
+		dd = delete a line
+
+		D = delete from current position
+
+
+## sed Command
+
+- Replace a string in a file with a newString
+- Find and delete line
+- Remove empty lines
+- Remove the first of n lines in a file
+- To Replace tabs with spaces
+- show defined lines from a file
+- Substitute within vi editor
+
+
+	
+- Replace a string in a file with a newString not permanently
+		
+		sed 's/Bd/Bangladesh/g' sen.txt
+
+- Replace a string in a file with a newString not permanently with existing file
+		
+		sed -i 's/Bd/Bangladesh/g' sen.txt
+		
+		
+- Find and delete line
+	
+		sed '/BD/d' seni.txt
+		
+- Remove empty lines
+	
+		sed -i '/^$/d' sein.txt
+		
+- Remove the first of n lines in a file
+	
+		sed -i '1d' sein.txt
 		
 
+- To Replace tabs with spaces
+	
+		sed 's/\t/ /g' sein.txt
+		
+		sed 's/ /\t/g' sein.txt
+		
+- show defined lines from a file
+		
+		sed -n 12,18p sein.txt (FROM 12 to 18 no character)
+		
+		sed 12,18d sein.txt
 
+		sed G sein.txt
+		
+		sed '/Seinfied/S/g' sein.txt (Replace Seinfied with S)
+		
+		sed '8!s/Seinfied/S/g' sein.txt (Replace Seinfied with S except 8 no line)
+		
+## User Accont Management
 
+		useradd
+		
+		groupadd
+		
+		userdel
+		
+		groupdel
+		
+		usermod
+		
 
+	Files
+	
+		- /etc/passwd
+		
+		- /etc/group
+		
+		- /etc/shadow
+		
 
+- Create user
 
+		useradd spiderman
+	
+- check user created 
+
+		id spiderman
+		
+		cd /home/
+
+		ls -l
+
+- Group add
+
+		groupadd superheros
+		
+		cat /etc/group
+		
+- delete user
+		
+		userdel 
+		
+		cd /home
+		
+		ls -l
+
+- delete home directory of spiderman
+
+		userdel -r spiderman
+		
+		ls -ltr
+
+- delete group
+
+		groupadd nonewGroup
+		
+		cat /etc/group
+		
+		groupdel nonewGroup
+		
+- we can add usergroup in multiple group
+		
+		useradd spiderman
+		
+		ls -ltr
+		
+		usermod -G superheroes spiderman
+		
+		cat /etc/group
+		
+		grep spiderman /etc/group
+		
+		chgrp -R superheroes spiderman
+		
+## Switch user
+
+		su - username
+
+		sudo command
+		
+		visudo
+		
+				
+	       - /etc/sudoers
+	       
+- go to spiderman account
+
+		su -spiderman
+
+- become root
+		su -
+
+## Monitor Users
+
+- who
+- last
+- w
+- finger
+- id
+
+		who
+		
+		hostname
+		
+		last | awk '{print $1}'
+		
+		last | awk '{print $1}' | sort | uniq
+		
+		w
+		
+		id
+		
+		fin  ger
+		
+		
+## Talking to User
+
+		users
+		
+		wall
+		
+		write username
+		
+## Linux Account Authentication
+		  			
+
+	
+			
+	
 
