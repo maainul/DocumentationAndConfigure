@@ -846,7 +846,30 @@ Most common keys:
 		
 		write username
 		
-## Linux Account Authentication
+## Difference between Active directory, LDAP, IBM, WinBind,OpenLDAP etc
+
+- Active Directory = Microsoft
+- IDM = Identity Manager
+- WinBind = Used in linux to communicate with windows (samba)
+- OpenLDAP = Open Source (Lightwate Directory Access Protocol)
+- IBM = IBM Dirctory Server
+- JumpCLoud
+- LDAP = Lightwate Directory Access Protocol
+
+## System Utility Commands
+
+- date
+- uptime
+- hostname
+- uname
+- which
+- cal
+- bc
+- uname -a
+
+- cal 9 1996
+
+
 		  			
 
 	
