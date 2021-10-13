@@ -592,8 +592,479 @@ Unzip file filename.tar.zip
 - Split file.txt into 300 lines per file and output to childfilea, childfileb and childfilec
  
 	
+# System Administration
+
 	
+## Linux File Editor
+
+- vi  - visual editor
+- ed  - standrd line editor
+- ex  - Extednded line editor
+- emacs - A full screen editor
+- pico - Beginner's editor
+- vim - Advance version of vi
+
+
+## Introduction to vi
+	- insert and deleting
+	- replacing text
+	- moving around text file
+	- finding and substituting strings
+	- cutting and pasting text
+
+Most common keys:
+
+		i = insert
+		  
+		Esc - Escape out of any mode
 		
+		r - replace
+		
+		d - delete
+		
+		:q! - quite without saving
+		
+		:wq! - quite
+		
+		k = up
+		
+		j = down
+		
+		l = right
+		
+		h = left
+		
+		w = right 1 word
+
+		b = left 1 word
+
+		^ = beginning of the line
+
+		$ = end of the line
+
+		i = insert cursor position
+
+		a = append after the cursor position
+
+		A = appendt at the end of the line
+
+		:w = write
+
+		:w! = force write
+
+		:q = quite
+
+		:q! = force + quite
+
+		:wq! = write and quite
+
+		:x = same as :wq
+
+		x = delete a character
+
+		dw = delete word
+
+		dd = delete a line
+
+		D = delete from current position
+
+
+## sed Command
+
+- Replace a string in a file with a newString
+- Find and delete line
+- Remove empty lines
+- Remove the first of n lines in a file
+- To Replace tabs with spaces
+- show defined lines from a file
+- Substitute within vi editor
+
+
+	
+- Replace a string in a file with a newString not permanently
+		
+		sed 's/Bd/Bangladesh/g' sen.txt
+
+- Replace a string in a file with a newString not permanently with existing file
+		
+		sed -i 's/Bd/Bangladesh/g' sen.txt
+		
+		
+- Find and delete line
+	
+		sed '/BD/d' seni.txt
+		
+- Remove empty lines
+	
+		sed -i '/^$/d' sein.txt
+		
+- Remove the first of n lines in a file
+	
+		sed -i '1d' sein.txt
+		
+
+- To Replace tabs with spaces
+	
+		sed 's/\t/ /g' sein.txt
+		
+		sed 's/ /\t/g' sein.txt
+		
+- show defined lines from a file
+		
+		sed -n 12,18p sein.txt (FROM 12 to 18 no character)
+		
+		sed 12,18d sein.txt
+
+		sed G sein.txt
+		
+		sed '/Seinfied/S/g' sein.txt (Replace Seinfied with S)
+		
+		sed '8!s/Seinfied/S/g' sein.txt (Replace Seinfied with S except 8 no line)
+		
+## User Accont Management
+
+		useradd
+		
+		groupadd
+		
+		userdel
+		
+		groupdel
+		
+		usermod
+		
+
+	Files
+	
+		- /etc/passwd
+		
+		- /etc/group
+		
+		- /etc/shadow
+		
+
+- Create user
+
+		useradd spiderman
+	
+- check user created 
+
+		id spiderman
+		
+		cd /home/
+
+		ls -l
+
+- Group add
+
+		groupadd superheros
+		
+		cat /etc/group
+		
+- delete user
+		
+		userdel 
+		
+		cd /home
+		
+		ls -l
+
+- delete home directory of spiderman
+
+		userdel -r spiderman
+		
+		ls -ltr
+
+- delete group
+
+		groupadd nonewGroup
+		
+		cat /etc/group
+		
+		groupdel nonewGroup
+		
+- we can add usergroup in multiple group
+		
+		useradd spiderman
+		
+		ls -ltr
+		
+		usermod -G superheroes spiderman
+		
+		cat /etc/group
+		
+		grep spiderman /etc/group
+		
+		chgrp -R superheroes spiderman
+		
+## Switch user
+
+		su - username
+
+		sudo command
+		
+		visudo
+		
+				
+	       - /etc/sudoers
+	       
+- go to spiderman account
+
+		su -spiderman
+
+- become root
+		su -
+
+## Monitor Users
+
+- who
+- last
+- w
+- finger
+- id
+
+		who
+		
+		hostname
+		
+		last | awk '{print $1}'
+		
+		last | awk '{print $1}' | sort | uniq
+		
+		w
+		
+		id
+		
+		fin  ger
+		
+		
+## Talking to User
+
+		users
+		
+		wall
+		
+		write username
+		
+## Difference between Active directory, LDAP, IBM, WinBind,OpenLDAP etc
+
+- Active Directory = Microsoft
+- IDM = Identity Manager
+- WinBind = Used in linux to communicate with windows (samba)
+- OpenLDAP = Open Source (Lightwate Directory Access Protocol)
+- IBM = IBM Dirctory Server
+- JumpCLoud
+- LDAP = Lightwate Directory Access Protocol
+
+## System Utility Commands
+
+- date
+- uptime
+- hostname
+- uname
+- which
+- cal
+- bc
+- uname -a
+
+- cal 9 1996
+
+
+## Processes and Jobs
+
+- Application = Service
+- Script = Shell scripts or commands are list of instructions eg . adduser, cd,pwd
+- Process = Service --> Process1, Process2
+- Daemon = Run untill interrupted
+- Threads = Service --> Process --> Thread1 --> thread1, thread2, thread3
+- Job = Job or Workorder = Run a service or process at a schedule time
+
+## Process and services commands
+
+- systemctl or service
+- ps
+- top
+- kill
+- crontab
+- at 
+
+		systemctl restart ntpd
+		
+		ps -ef
+		
+		systemctl status ntpd
+		
+		ps -ef | grep ntpd
+		
+		systemctl enable ntpd
+		
+		top ---> gives you number of total task
+		
+		kill 12027 (Process Id)
+		
+		
+## Additional Corn Jobs
+
+	- Hourly
+	- Daily
+	- Weekly
+	- Monthly
+
+- All the above corns are setup in
+
+	- /etc/cron 
+	
+- The timing for each are set in 
+	- /ect/anacrontab -- except hourly
+
+		cat /etc/anacrontab
+		
+## Process Management 
+	
+- Background = Ctrl-z
+- Foreground = fg
+- Run process even after exit = nohup process &
+	- oR = nohup process > dev/null 2 > &1 &
+
+- Kill a process by name = pkill
+- process priority = nice( nice -n 5 process)
+- process monitor = top
+
+		ps -ef
+		
+		top
+		
+		ps -ef | grep sleep
+		
+## System Monitoring
+
+- top
+- df
+- dmesg
+- iostart 1
+- netstat
+- free
+- cat /proc/cpuinfo
+- cat /proc/meminfo
+	
+	
+df = disk partition information
+
+		df
+		
+		netstat 
+		
+		free
+		
+		cat 
+		
+		cat /proc/cpuinfo  ---> show cpu information
+		
+		cat /proc/meminfo  ---> 
+		
+## Log monitoring
+
+		Log directory = /var/log
+		
+- boot
+- chronyd = NTP
+- cron
+- maillog
+- secure
+- messages
+- httpd
+
+		cd /var/log
+		
+		ls -l
+		
+		cd /var/log
+		
+		sudo more boot.log ---> show log 
+			
+		ls -l boot.log
+		
+		chronyd
+		
+		ll | more 
+		
+		cd /var/log
+		
+		more messages
+
+## System Monitor
+
+		shutdown
+		
+		init 0-6
+		
+		reboot
+		
+		halt
+		
+## Changing System Hostname
+
+- hostnamectl - set-hostname newhostname
+- vesion 7 = Edit /etc/hostname
+- verion 6 = Edit /etc/sysconfig/network
+
+		hostname
+		
+- change hostname : First become root
+
+		su -
+		
+		hostname 
+		
+		cat /etc/hostname
+		
+		hostnamectl set-hostname mynewhostname
+		
+		cat /etc/hostname
+		
+		hostname
+		
+		reboot
+		
+## Finding Sytem Information
+	
+- cat /etc/redhat-release
+
+- uname -a
+			
+- dmidecode 
+
+- Show linux info
+
+		uname -a
+
+- all info.
+		
+		dmidecode | more
+
+
+
+## System Architecture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
