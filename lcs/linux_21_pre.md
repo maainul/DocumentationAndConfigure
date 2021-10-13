@@ -870,9 +870,205 @@ Most common keys:
 - cal 9 1996
 
 
-		  			
+## Processes and Jobs
 
+- Application = Service
+- Script = Shell scripts or commands are list of instructions eg . adduser, cd,pwd
+- Process = Service --> Process1, Process2
+- Daemon = Run untill interrupted
+- Threads = Service --> Process --> Thread1 --> thread1, thread2, thread3
+- Job = Job or Workorder = Run a service or process at a schedule time
+
+## Process and services commands
+
+- systemctl or service
+- ps
+- top
+- kill
+- crontab
+- at 
+
+		systemctl restart ntpd
+		
+		ps -ef
+		
+		systemctl status ntpd
+		
+		ps -ef | grep ntpd
+		
+		systemctl enable ntpd
+		
+		top ---> gives you number of total task
+		
+		kill 12027 (Process Id)
+		
+		
+## Additional Corn Jobs
+
+	- Hourly
+	- Daily
+	- Weekly
+	- Monthly
+
+- All the above corns are setup in
+
+	- /etc/cron 
 	
+- The timing for each are set in 
+	- /ect/anacrontab -- except hourly
+
+		cat /etc/anacrontab
+		
+## Process Management 
+	
+- Background = Ctrl-z
+- Foreground = fg
+- Run process even after exit = nohup process &
+	- oR = nohup process > dev/null 2 > &1 &
+
+- Kill a process by name = pkill
+- process priority = nice( nice -n 5 process)
+- process monitor = top
+
+		ps -ef
+		
+		top
+		
+		ps -ef | grep sleep
+		
+## System Monitoring
+
+- top
+- df
+- dmesg
+- iostart 1
+- netstat
+- free
+- cat /proc/cpuinfo
+- cat /proc/meminfo
+	
+	
+df = disk partition information
+
+		df
+		
+		netstat 
+		
+		free
+		
+		cat 
+		
+		cat /proc/cpuinfo  ---> show cpu information
+		
+		cat /proc/meminfo  ---> 
+		
+## Log monitoring
+
+		Log directory = /var/log
+		
+- boot
+- chronyd = NTP
+- cron
+- maillog
+- secure
+- messages
+- httpd
+
+		cd /var/log
+		
+		ls -l
+		
+		cd /var/log
+		
+		sudo more boot.log ---> show log 
 			
+		ls -l boot.log
+		
+		chronyd
+		
+		ll | more 
+		
+		cd /var/log
+		
+		more messages
+
+## System Monitor
+
+		shutdown
+		
+		init 0-6
+		
+		reboot
+		
+		halt
+		
+## Changing System Hostname
+
+- hostnamectl - set-hostname newhostname
+- vesion 7 = Edit /etc/hostname
+- verion 6 = Edit /etc/sysconfig/network
+
+		hostname
+		
+- change hostname : First become root
+
+		su -
+		
+		hostname 
+		
+		cat /etc/hostname
+		
+		hostnamectl set-hostname mynewhostname
+		
+		cat /etc/hostname
+		
+		hostname
+		
+		reboot
+		
+## Finding Sytem Information
 	
+- cat /etc/redhat-release
+
+- uname -a
+			
+- dmidecode 
+
+- Show linux info
+
+		uname -a
+
+- all info.
+		
+		dmidecode | more
+
+
+
+## System Architecture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
