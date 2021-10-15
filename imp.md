@@ -27,6 +27,10 @@
 	
 ## Run yokke: 
 
+### ipg
+
+	docker-compose up
+
 	brankas-ipg/merchant-service
 	
 	merchant-service git:(master) ✗ ./run.sh 
