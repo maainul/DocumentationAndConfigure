@@ -104,45 +104,45 @@
 	
 	docker ps
 
- 5312  git status
+## PUSH and rebase
+
+   git status
  
- 5313  git add .
+   git add .
  
- 5314  git commit -am "Html slice"
+   git commit -am "Html slice"
  
- 5315  git checkout master
+   git checkout master
  
- 5316  git pull upsteam master
+   git pull upsteam master
  
- 5317  git pull upstream master
+   go mod vendor
  
- 5318  go mod vendor
+   cd go/src/brank.as/netbank
  
- 5319  cd go/src/brank.as/netbank
+   code .
  
- 5320  code .
+   git status
  
- 5321  git status
+   git checkout NV-352-connect-endpoint-to-frontend-html-slice
  
- 5322  git checkout NV-352-connect-endpoint-to-frontend-html-slice
+   git status
  
- 5323  git status
+   code .
  
- 5324  code .
+   go mod vendor
  
- 5325  go mod vendor
+   code .
  
- 5326  code .
+   git rebase master
  
- 5327  git rebase master
+   git add .
  
- 5328  git add .
+   git rebase --continue
  
- 5329  git rebase --continue
+   git status
  
- 5330  git status
- 
- 5331  go mod vendor
+   go mod vendor
 
 
 ## Git Reset
