@@ -4,8 +4,12 @@
 	get github.com/gunk/gunk
 	
 	sudo npm install -g pnpm
-
 	
+# SHow Http data on html page
+
+	http.Error(w, "182=="+err.Error(), http.StatusAccepted)
+	
+	http.Error(w, "187== ACCOUNT ID = "+ac.AccountID+" ACCOUNT NUMBER ==== "+ac.AccountNumber+" CREDIT TRANSACTION NUMBER === "+ac.CreditTransactionNumber, http.StatusAccepted)
 	
 
 # PetNet conf
