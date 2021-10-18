@@ -1,3 +1,13 @@
+# generate gunk
+	install pnpmgo 
+	
+	get github.com/gunk/gunk
+	
+	sudo npm install -g pnpm
+
+	
+	
+
 # PetNet conf
 
 ## Pull from master petnet and rbac
