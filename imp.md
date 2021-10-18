@@ -1,3 +1,22 @@
+# migration cmd :
+
+go run migrations/migrate.go up
+
+
+1. migrate :
+
+    go run migrations/migrate.go down
+    
+    go run migrations/migrate.go up
+    
+    go run migrations/migrate.go status
+    
+    go run migrations/migrate.go version
+    
+    go run migrations/migrate.go create aritcles sql
+    
+    go run migrations/migrate.go create aritcles go
+
 # go solve no required module provides package xxx: go.mod file not found in current directory or any parent directory; see'go help modules'
 	
 	go env -w GO111MODULE=auto
