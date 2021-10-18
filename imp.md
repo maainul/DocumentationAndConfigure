@@ -1,9 +1,17 @@
+# go solve no required module provides package xxx: go.mod file not found in current directory or any parent directory; see'go help modules'
+	
+	go env -w GO111MODULE=auto
+
+	https://www.cnblogs.com/l199616j/p/15269281.html
+
 # generate gunk
+
 	install pnpmgo 
 	
 	get github.com/gunk/gunk
 	
 	sudo npm install -g pnpm
+	
 	
 # SHow Http data on html page
 
