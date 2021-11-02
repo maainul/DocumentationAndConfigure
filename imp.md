@@ -1,3 +1,7 @@
+# Yokke Problem : paymentsource not null constraint
+
+ALTER TABLE "public"."providers" ADD COLUMN "paymentsource" text NOT NULL DEFAULT '';
+
 # migration cmd :
 
 go run migrations/migrate.go up
