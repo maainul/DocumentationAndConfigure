@@ -231,7 +231,7 @@ go run migrations/migrate.go up
 	
 	git clone 
 
-	git remote add upsteam git@git.brankas.dev:netbank/netbank.git
+	git remote add upstream git@git.brankas.dev:netbank/netbank.git
 
 ## How to stop postgres
 
