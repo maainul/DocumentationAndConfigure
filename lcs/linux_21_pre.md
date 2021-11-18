@@ -1047,6 +1047,9 @@ df = disk partition information
 ## System Architecture
 
 
+	arch
+
+	
 
 
 
