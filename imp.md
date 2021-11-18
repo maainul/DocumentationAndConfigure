@@ -1,3 +1,48 @@
+# Yokke Problem : paymentsource not null constraint
+
+ALTER TABLE "public"."providers" ADD COLUMN "paymentsource" text NOT NULL DEFAULT '';
+
+# migration cmd :
+
+go run migrations/migrate.go up
+
+
+1. migrate :
+
+    go run migrations/migrate.go down
+    
+    go run migrations/migrate.go up
+    
+    go run migrations/migrate.go status
+    
+    go run migrations/migrate.go version
+    
+    go run migrations/migrate.go create aritcles sql
+    
+    go run migrations/migrate.go create aritcles go
+
+# go solve no required module provides package xxx: go.mod file not found in current directory or any parent directory; see'go help modules'
+	
+	go env -w GO111MODULE=auto
+
+	https://www.cnblogs.com/l199616j/p/15269281.html
+
+# generate gunk
+
+	install pnpmgo 
+	
+	get github.com/gunk/gunk
+	
+	sudo npm install -g pnpm
+	
+	
+# SHow Http data on html page
+
+	http.Error(w, "182=="+err.Error(), http.StatusAccepted)
+	
+	http.Error(w, "187== ACCOUNT ID = "+ac.AccountID+" ACCOUNT NUMBER ==== "+ac.AccountNumber+" CREDIT TRANSACTION NUMBER === "+ac.CreditTransactionNumber, http.StatusAccepted)
+	
+
 # PetNet conf
 
 ## Pull from master petnet and rbac
@@ -26,6 +71,10 @@
 	intergations ----> intreget 3rd party api
 	
 ## Run yokke: 
+
+### ipg
+
+	docker-compose up
 
 	brankas-ipg/merchant-service
 	
@@ -100,45 +149,45 @@
 	
 	docker ps
 
- 5312  git status
+## PUSH and rebase
+
+   git status
  
- 5313  git add .
+   git add .
  
- 5314  git commit -am "Html slice"
+   git commit -am "Html slice"
  
- 5315  git checkout master
+   git checkout master
  
- 5316  git pull upsteam master
+   git pull upsteam master
  
- 5317  git pull upstream master
+   go mod vendor
  
- 5318  go mod vendor
+   cd go/src/brank.as/netbank
  
- 5319  cd go/src/brank.as/netbank
+   code .
  
- 5320  code .
+   git status
  
- 5321  git status
+   git checkout NV-352-connect-endpoint-to-frontend-html-slice
  
- 5322  git checkout NV-352-connect-endpoint-to-frontend-html-slice
+   git status
  
- 5323  git status
+   code .
  
- 5324  code .
+   go mod vendor
  
- 5325  go mod vendor
+   code .
  
- 5326  code .
+   git rebase master
  
- 5327  git rebase master
+   git add .
  
- 5328  git add .
+   git rebase --continue
  
- 5329  git rebase --continue
+   git status
  
- 5330  git status
- 
- 5331  go mod vendor
+   go mod vendor
 
 
 ## Git Reset
@@ -182,7 +231,7 @@
 	
 	git clone 
 
-	git remote add upsteam git@git.brankas.dev:netbank/netbank.git
+	git remote add upstream git@git.brankas.dev:netbank/netbank.git
 
 ## How to stop postgres
 
